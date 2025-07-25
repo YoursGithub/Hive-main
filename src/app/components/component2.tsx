@@ -16,7 +16,7 @@ const component2 = () => {
                 <div className="flex flex-wrap mt-10 gap-20">
                   <div className="flex items-center justify-center">
                     <div className="w-16 h-16 rounded-full overflow-hidden mb-2">
-                      <img
+                      <Image
                         src="/assets/pngwing.com (9).png"
                         alt="Indian Food"
                         className="w-full h-full object-cover"
@@ -34,7 +34,7 @@ const component2 = () => {
 
                   <div className="flex items-center justify-center">
                     <div className="w-16 h-16 rounded-full overflow-hidden mb-2">
-                      <img
+                      <Image
                         src="/assets/pngwing.com (9).png"
                         alt="Indian Food"
                         className="w-full h-full object-cover"
@@ -52,7 +52,7 @@ const component2 = () => {
 
                   <div className="flex items-center justify-center">
                     <div className="w-16 h-16 rounded-full overflow-hidden mb-2">
-                      <img
+                      <Image
                         src="/assets/pngwing.com (9).png"
                         alt="Indian Food"
                         className="w-full h-full object-cover"
@@ -74,7 +74,7 @@ const component2 = () => {
                 <div className="flex flex-wrap mt-3 gap-20">
                   <div className="flex items-center justify-center">
                     <div className="w-16 h-16 rounded-full overflow-hidden mb-2">
-                      <img
+                      <Image
                         src="/assets/pngwing.com (9).png"
                         alt="Indian Food"
                         className="w-full h-full object-cover"
@@ -92,7 +92,7 @@ const component2 = () => {
 
                   <div className="flex items-center justify-center">
                     <div className="w-16 h-16 rounded-full overflow-hidden mb-2">
-                      <img
+                      <Image
                         src="/assets/pngwing.com (9).png"
                         alt="Indian Food"
                         className="w-full h-full object-cover"
@@ -110,7 +110,7 @@ const component2 = () => {
 
                   <div className="flex items-center justify-center">
                     <div className="w-16 h-16 rounded-full overflow-hidden mb-2">
-                      <img
+                      <Image
                         src="/assets/pngwing.com (9).png"
                         alt="Indian Food"
                         className="w-full h-full object-cover"

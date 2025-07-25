@@ -153,7 +153,7 @@ const HiveHomepage = () => {
       <section className="w-full px-6 md:px-20 py-14 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-[22px] md:text-[24px] font-bold text-black max-w-[450px] leading-snug">
-            Not Just Another Delivery App, This one's Interesting
+            Not Just Another Delivery App, This one&apos;s Interesting
           </h2>
 
           <Image
@@ -255,7 +255,7 @@ const HiveHomepage = () => {
               </div>
             </div>
 
-            <img
+            <Image
               src="/assets/money.png"
               width={250}
               height={250}
@@ -265,7 +265,7 @@ const HiveHomepage = () => {
           </div>
 
           <div className="absolute w-full top-[-270px] flex justify-center z-30 pointer-events-none">
-            <img
+            <Image
               src="/assets/iPhone 16.png"
               width={800}
               height={800}
