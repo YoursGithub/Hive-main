@@ -1,11 +1,23 @@
 import React from "react";
+import { Restaurant } from "@/app/types/index";
 
-const LeftSidebar = ({ restaurants, activeRestaurant, onRestaurantClick }: any) => {
+type LeftSidebarProps = {
+  restaurants: Restaurant[];
+  activeRestaurant: Restaurant;
+  onRestaurantClick: (restaurant: Restaurant) => void;
+};
+
+const LeftSidebar: React.FC<LeftSidebarProps> = ({
+  restaurants,
+  activeRestaurant,
+  onRestaurantClick,
+}) => {
   return (
     <>
+      {/* Desktop Sidebar */}
       <div className="hidden md:block w-80 bg-white mt-10 h-screen overflow-y-auto ml-10">
         <div className="p-2">
-          {restaurants.map((restaurant: any) => (
+          {restaurants.map((restaurant) => (
             <div
               key={restaurant.id}
               onClick={() => onRestaurantClick(restaurant)}
@@ -29,6 +41,7 @@ const LeftSidebar = ({ restaurants, activeRestaurant, onRestaurantClick }: any) 
         </div>
       </div>
 
+      {/* Mobile Scrollable List */}
       <div className="md:hidden mt-6 px-4">
         <div
           className="flex space-x-4 overflow-x-auto pb-2"
@@ -39,10 +52,10 @@ const LeftSidebar = ({ restaurants, activeRestaurant, onRestaurantClick }: any) 
         >
           <style jsx>{`
             div::-webkit-scrollbar {
-              display: none; // Chrome/Safari
+              display: none;
             }
           `}</style>
-          {restaurants.map((restaurant:any) => (
+          {restaurants.map((restaurant) => (
             <div
               key={restaurant.id}
               onClick={() => onRestaurantClick(restaurant)}
