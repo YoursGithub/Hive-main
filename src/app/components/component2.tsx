@@ -5,137 +5,162 @@ const component2 = () => {
   return (
     <>
       <section className="mt-20 flex justify-center container">
-        <div className="flex">
-          <div className="mt-20">
-            <h2 className="text-3xl text-black font-extrabold">
-              Explore cuisines and learn some great <br /> facts about them
+        <div className="flex flex-col md:flex-row items-center md:items-start">
+          <div className="mt-20 text-center md:text-left">
+            <h2 className="text-3xl m-2 md:m-0 text-black font-extrabold relative">
+              Explore <span className="parallelogram-highlight">cuisines</span>{" "}
+              and learn some great <br className="hidden md:block" />
+              facts about them
+              <style jsx>{`
+                .parallelogram-highlight {
+                  position: relative;
+                  display: inline-block;
+                  padding: 0 0.25rem;
+                  z-index: 1;
+                  color: black;
+                }
+
+                .parallelogram-highlight::before {
+                  content: "";
+                  position: absolute;
+                  inset: 0;
+                  background-color: #facc15; /* Tailwind yellow-400 */
+                  transform: skew(-20deg);
+                  z-index: -1;
+                  border-radius: 2px;
+                }
+              `}</style>
             </h2>
 
-            <div className="flex gap-72">
-              <div>
-                <div className="flex flex-wrap mt-10 gap-20">
-                  <div className="flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full overflow-hidden mb-2">
-                      <Image
-                        src="/assets/pngwing.com (9).png"
-                        alt="Indian Food"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-base font-semibold text-black">
-                        Indian
-                      </h3>
-                      <p className="text-xs text-gray-500 mt-1">
-                        Biriyani, Naan, Roti
-                      </p>
-                    </div>
+            <div className="flex flex-col md:flex-row gap-10 md:gap-40 m-4 mt-10 items-center md:items-start">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-10 mb-20 lg:mb-0">
+                <div className="flex items-center gap-3">
+                  <div className="w-16 h-16 rounded-full overflow-hidden mb-2">
+                    <Image
+                      src="/assets/image1.png"
+                      alt="Indian Food"
+                      width={25}
+                      height={25}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-
-                  <div className="flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full overflow-hidden mb-2">
-                      <Image
-                        src="/assets/pngwing.com (9).png"
-                        alt="Indian Food"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-base font-semibold text-black">
-                        Indian
-                      </h3>
-                      <p className="text-xs text-gray-500 mt-1">
-                        Biriyani, Naan, Roti
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full overflow-hidden mb-2">
-                      <Image
-                        src="/assets/pngwing.com (9).png"
-                        alt="Indian Food"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-base font-semibold text-black">
-                        Indian
-                      </h3>
-                      <p className="text-xs text-gray-500 mt-1">
-                        Biriyani, Naan, Roti
-                      </p>
-                    </div>
+                  <div>
+                    <h3 className="text-base font-semibold text-black">
+                      Indian
+                    </h3>
+                    <p className="text-xs text-[#AEAEAE] mt-1">
+                      Biriyani, Naan, Roti
+                    </p>
                   </div>
                 </div>
 
-                {/* Second part */}
-
-                <div className="flex flex-wrap mt-3 gap-20">
-                  <div className="flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full overflow-hidden mb-2">
-                      <Image
-                        src="/assets/pngwing.com (9).png"
-                        alt="Indian Food"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-base font-semibold text-black">
-                        Indian
-                      </h3>
-                      <p className="text-xs text-gray-500 mt-1">
-                        Biriyani, Naan, Roti
-                      </p>
-                    </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-16 h-16 rounded-full overflow-hidden mb-2">
+                    <Image
+                      src="/assets/pngwing.com (5).png"
+                      alt="Japanese Food"
+                      width={25}
+                      height={25}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-
-                  <div className="flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full overflow-hidden mb-2">
-                      <Image
-                        src="/assets/pngwing.com (9).png"
-                        alt="Indian Food"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-base font-semibold text-black">
-                        Indian
-                      </h3>
-                      <p className="text-xs text-gray-500 mt-1">
-                        Biriyani, Naan, Roti
-                      </p>
-                    </div>
+                  <div>
+                    <h3 className="text-base font-semibold text-black">
+                      Japanese
+                    </h3>
+                    <p className="text-xs text-[#AEAEAE] mt-1">
+                      Noodles, Dumplings
+                    </p>
                   </div>
+                </div>
 
-                  <div className="flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full overflow-hidden mb-2">
-                      <Image
-                        src="/assets/pngwing.com (9).png"
-                        alt="Indian Food"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-base font-semibold text-black">
-                        Indian
-                      </h3>
-                      <p className="text-xs text-gray-500 mt-1">
-                        Biriyani, Naan, Roti
-                      </p>
-                    </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-16 h-16 rounded-full overflow-hidden mb-2">
+                    <Image
+                      src="/assets/pngwing.com (1).png"
+                      alt="Chinese Food"
+                      width={25}
+                      height={25}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-semibold text-black">
+                      Chinese
+                    </h3>
+                    <p className="text-xs text-[#AEAEAE] mt-1">
+                      Noodles, Dumplings
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <div className="w-16 h-16 rounded-full overflow-hidden mb-2">
+                    <Image
+                      src="/assets/pngwing.com (2).png"
+                      alt="Thai Food"
+                      width={25}
+                      height={25}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-semibold text-black">Thai</h3>
+                    <p className="text-xs text-[#AEAEAE] mt-1">
+                      Thukpa, Sea Salad
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <div className="w-16 h-16 rounded-full overflow-hidden mb-2">
+                    <Image
+                      src="/assets/pngwing.com (6).png"
+                      alt="Italian Food"
+                      width={25}
+                      height={25}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-semibold text-black">
+                      Italian
+                    </h3>
+                    <p className="text-xs text-[#AEAEAE] mt-1">
+                      Pasta, Pizza, Lasagna
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <div className="w-16 h-16 ml-[-10px] rounded-full overflow-hidden mb-2">
+                    <Image
+                      src="/assets/pngwing.com (9).png"
+                      alt="American Food"
+                      width={25}
+                      height={25}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-semibold text-black">
+                      American
+                    </h3>
+                    <p className="text-xs text-[#AEAEAE] mt-1">
+                      Biriyani, Naan, Roti
+                    </p>
                   </div>
                 </div>
               </div>
 
-              <div className="relative">
-                <div className="">
+              <div className="relative mt-36 md:mt-0">
+                <div>
                   <Image
                     src="/assets/iPhone 16 Pro.png"
                     alt="icon3"
-                    width={200}
-                    height={200}
-                    className="mt-[-130px]"
+                    width={250}
+                    height={250}
+                    className="mt-[-130px] md:mt-[-130px] mx-auto"
                   />
                 </div>
 

@@ -6,12 +6,12 @@ import Component1 from "./components/component1";
 import Component2 from "./components/component2";
 import Image from "next/image";
 import Footer from "./components/footer";
+import Button from "./components/button";
+import HiveCreator from "./components/HiveCreator";
+import How from "./components/How";
 
 const HiveHomepage = () => {
   const [mounted, setMounted] = useState(false);
-  const [activeLocation, setActiveLocation] = useState("Sribhumi");
-
-  const locations = ["Dharmanagar", "Sribhumi", "Silchar"];
 
   useEffect(() => {
     setMounted(true);
@@ -52,7 +52,7 @@ const HiveHomepage = () => {
     <div className="min-h-screen overflow-x-hidden bg-white relative">
       <Navbar />
 
-      <main className="relative z-10 flex flex-col items-center justify-center px-6 pt-24">
+      <main className="relative flex flex-col items-center justify-center px-6 pt-24">
         <div className="relative flex flex-col items-center justify-center">
           <div className="relative w-[200px] h-[80px] flex justify-between mb-2">
             <Image
@@ -106,9 +106,9 @@ const HiveHomepage = () => {
           />
         </div>
 
-        <div className="bg-[#0A0A0A] mt-[-200px] text-white py-6 relative">
-          <div className="max-w-4xl mx-auto text-center px-6">
-            <h2 className="text-2xl md:text-3xl font-bold mt-5">
+        <div className="bg-[#0A0A0A] mt-[-200px] text-white relative lg:min-h-[400px] min-h-[700px] flex items-center">
+          <div className="max-w-4xl mx-auto text-center px-6 relative">
+            <h2 className="text-[27px] font-bold lg:mt-[-100px] mt-[-250px]">
               <span className="text-yellow-500">#</span>don&apos;t just order,
               have fun
             </h2>
@@ -137,40 +137,19 @@ const HiveHomepage = () => {
               </div>
             </div>
 
-            <div className="mt-10 flex justify-end">
+            <div className="absolute lg:top-[20px] top-36 right-10  lg:right-[-40%]">
               <Image
                 src="/assets/middleman.png"
                 width={300}
                 height={300}
                 alt="Middleman"
-                className="mt-[-80px] ml-[200px]"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="w-full px-6 md:px-20 py-14 bg-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-[22px] md:text-[24px] font-bold text-black max-w-[450px] leading-snug">
-            Not Just Another Delivery App, This one&apos;s Interesting
-          </h2>
-
-          <Image
-            src="/assets/line.png"
-            width={750}
-            height={300}
-            alt="Line"
-            className="mx-auto left-20"
-          />
-
-          <div className="relative h-[160px] w-full">
-            <div className="absolute right-20 mt-[-110px] text-black font-semibold text-3xl">
-              How?
-            </div>
-          </div>
-        </div>
-      </section>
+      <How />
 
       <section>
         <Component1 />
@@ -180,9 +159,9 @@ const HiveHomepage = () => {
         <Component2 />
       </section>
 
-      <section className="container">
-        <div className="flex gap-56">
-          <div className="mt-40">
+      <section className="container hidden md:block">
+        <div className="flex lg:gap-56">
+          <div className="lg:mt-40 mt-0">
             <Image
               src="/assets/sidemob.png"
               alt="icon1"
@@ -230,55 +209,11 @@ const HiveHomepage = () => {
         </div>
       </section>
 
-      <section>
-        <div className="text-center">
-          <h2 className="text-black text-2xl font-extrabold">
-            Become Hive Creator and earn rewards just by <br /> uploading
-          </h2>
-        </div>
-
-        <div className="relative">
-          <div className="bg-black mb-10 mt-64 text-white py-16 relative overflow-hidden z-10">
-            <div className="container mx-auto relative z-20 flex items-center justify-between">
-              <div className="ml-10 space-y-5">
-                <h3 className="text-xl font-semibold">
-                  Join as a creator and Earn!
-                </h3>
-                <p className="text-sm  leading-relaxed">
-                  Join as a NearHive creator and earn credits, offers, goodies{" "}
-                  <br />
-                  and many more by contributing to NearHive community.
-                </p>
-                <button className="bg-[#F1B729] text-black font-semibold px-8 py-3 rounded-full hover:bg-yellow-500 transition-colors">
-                  Join
-                </button>
-              </div>
-            </div>
-
-            <Image
-              src="/assets/money.png"
-              width={250}
-              height={250}
-              alt="Rewards"
-              className="absolute right-20 top-14 z-0 pointer-events-none"
-            />
-          </div>
-
-          <div className="absolute w-full top-[-270px] flex justify-center z-30 pointer-events-none">
-            <Image
-              src="/assets/iPhone 16.png"
-              width={800}
-              height={800}
-              alt="Mobile"
-              className="mx-auto"
-            />
-          </div>
-        </div>
-      </section>
+      <HiveCreator />
 
       <section className="mt-20">
-        <div className="text-center">
-          <h2 className="text-black text-2xl font-extrabold">
+        <div className="text-center m-10">
+          <h2 className="text-black text-3xl md:text-2xl font-extrabold">
             Introducing HiveVerse
           </h2>
           <p className="text-black mt-3 text-sm">
@@ -288,14 +223,14 @@ const HiveHomepage = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10 mb-20 m-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 text-center md:text-left gap-8 mt-10 mb-20 m-20">
           <div className="bg-gray-50 p-6 rounded-lg shadow hover:shadow-md transition">
             <Image
               src="/assets/Poila Boishak (6) 3.png"
               alt="DropHive"
               width={90}
               height={90}
-              className=" mb-4 "
+              className=" mb-4 mx-auto md:mx-0 md:ml-0"
             />
             <h3 className="text-2xl font-semibold text-black mb-1 mt-20">
               DropHive
@@ -314,7 +249,7 @@ const HiveHomepage = () => {
               alt="ShopHive"
               width={90}
               height={90}
-              className=" mb-4"
+              className=" mb-4 mx-auto md:mx-0 md:ml-0"
             />
             <h3 className="text-2xl font-semibold text-black mb-1 mt-20">
               ShopHive
@@ -333,8 +268,9 @@ const HiveHomepage = () => {
               alt="MediHive"
               width={90}
               height={90}
-              className=" mb-4"
+              className="mb-4 mx-auto md:mx-0 md:ml-0"
             />
+
             <h3 className="text-2xl font-semibold text-black mb-1 mt-20">
               MediHive
             </h3>
@@ -353,7 +289,7 @@ const HiveHomepage = () => {
           <h2 className="text-black text-2xl font-extrabold">
             Locations we are currently <br /> operating
           </h2>
-          <p className="text-black mt-3 text-sm">
+          <p className="text-black mt-3 text-sm m-10">
             our goal is to provide the best services to lower tier cities cause
             these big companies won’t do <br /> that as they just want profit so
             they ignore lower tier cities. We are here to provide better <br />{" "}
@@ -361,26 +297,34 @@ const HiveHomepage = () => {
           </p>
         </div>
 
-        <div className="flex gap-5 md:ml-[-40px] justify-center mt-4">
-          {locations.map((location) => (
-        <button
-          key={location}
-          onClick={() => setActiveLocation(location)}
-          className={`mt-2 px-8 py-2 rounded-full text-center transition-colors duration-300 ease-in-out cursor-pointer border border-[#A7A7A7] 
-            ${
-              activeLocation === location
-                ? "bg-yellow-500 text-black"
-                : "bg-white text-[#949494] hover:bg-yellow-500 hover:text-black"
-            }
-          `}
-        >
-          {location}
-        </button>
-      ))}
+        <Button />
+      </section>
+
+      <section className="mb-10">
+        <div className="flex lg:flex-row text-center items-center flex-col mt-20 gap-10 justify-center">
+          <div className="flex gap-3">
+            <div className="bg-[#F1B729] w-3 h-3"></div>
+            <p className="mt-[-5px] text-black font-bold">FASTEST DELIVERY</p>
+          </div>
+
+          <div className="flex gap-3">
+            <div className="bg-[#F1B729] w-3 h-3"></div>
+            <p className="mt-[-5px] text-black font-bold">BEST SERVICE</p>
+          </div>
+
+          <div className="flex gap-3">
+            <div className="bg-[#F1B729] w-3 h-3"></div>
+            <p className="mt-[-5px] text-black font-bold">HYBRID COMMERCE</p>
+          </div>
         </div>
       </section>
 
 
+      <div className="text-center pt-8 lg:hidden md:block mb-10">
+          <p className="text-lg uppercase text-black tracking-wider">
+            ©ALL RIGHTS RESERVED 2025
+          </p>
+        </div>
       <Footer />
     </div>
   );
