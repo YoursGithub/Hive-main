@@ -11,9 +11,9 @@ function Hivecreators() {
 
       <section>
         <div>
-          <div className="bg-black gap-10 mt-5">
+          <div className="bg-black gap-10 lg:mt-5">
             <div className="flex flex-col md:flex-row gap-36 justify-center p-10 items-center">
-              <div className="text-white space-y-5 mt-28 lg:mt-10">
+              <div className="text-white space-y-5 mt-7 lg:mt-10">
                 <p className="text-xs">HIVE BLOG</p>
                 <h2 className="text-3xl whitespace-nowrap font-extrabold">Join as a creator and earn!</h2>
                 <p className="text-lg lg:text-sm lg:mt-0 mt-10">
