@@ -44,6 +44,7 @@ const Hiveblogs = () => {
             alt="Hive Creator"
             layout="fill"
             objectFit="cover"
+            className="pr-2"
           />
         </div>
         <div className="p-2 hidden lg:block text-center text-black font-semibold text-[10px] whitespace-nowrap leading-tight">
@@ -61,6 +62,7 @@ const Hiveblogs = () => {
             alt="Hive Ecosystem"
             layout="fill"
             objectFit="cover"
+            className="pr-2"
           />
         </div>
         <div className="p-2 hidden lg:block text-center text-black text-[10px] whitespace-nowrap font-semibold text-xs leading-tight">
@@ -77,13 +79,13 @@ const Hiveblogs = () => {
       <Navbar />
       <div className="min-h-screen p-1">
         <div className="max-w-7xl mx-auto bg-white min-h-[500px] flex flex-col md:flex-row mt-24 lg:mt-0">
-          <div className="lg:mt-40 mt-6 mx-auto flex flex-row items-start gap-4">
+          <div className="lg:mt-40 mt-6 mx-auto flex flex-row items-start gap-2">
             <Image
               src="/assets/photo.png"
               width={800}
               height={800}
               alt="Main"
-              className="object-cover w-[300px] lg:w-[400px] h-44 lg:h-64"
+              className="object-cover w-[260px] lg:w-[400px] h-44 lg:h-64"
             />
 
             <div className="lg:hidden">
@@ -94,7 +96,7 @@ const Hiveblogs = () => {
           </div>
 
           <div className="flex-1 px-12 py-16 bg-white lg:text-left text-center relative flex flex-col justify-center">
-            <div className="max-w-md">
+            <div className="text-center lg:max-w-md">
               <h1 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
                 {currentContent.title}
               </h1>
@@ -126,12 +128,11 @@ const Hiveblogs = () => {
         </div>
       </div>
 
-      {/* ✅ Fixed full-width black section */}
       <section className="w-full bg-black text-center py-16">
         <div className="space-y-10">
           <div className="text-white px-4">
             <h2 className="text-3xl">don’t just order, have fun</h2>
-            <p className="text-sm mt-5 max-w-md mx-auto text-center">
+            <p className="text-sm mt-5 lg:max-w-md mx-auto text-center">
               Join as a NearHive creator and earn credits, offers, goodies and
               many more by contributing to NearHive community. Join as a
               NearHive creator and earn credits, offers, goodies and many more
@@ -154,7 +155,6 @@ const Hiveblogs = () => {
         </div>
       </section>
 
-      {/* Rest of the sections */}
       <section className="mt-20">
         <div className="text-black text-center">
           <h2 className="text-3xl">don’t just order, have fun</h2>
@@ -174,7 +174,7 @@ const Hiveblogs = () => {
       <section className="mt-20">
         <div className="text-center text-black">
           <p className="text-sm">HIVE BLOGS</p>
-          <h2 className="text-xl">
+          <h2 className="text-xl m-3">
             Join as a NearHive creator and earn credits, offers, goodies.
           </h2>
         </div>

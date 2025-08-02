@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Nearhive",
   description: "don't just order, have fun",
+  icons: {
+    icon: "/assets/favicon-modified.png",
+  },
 };
 
 export default function RootLayout({

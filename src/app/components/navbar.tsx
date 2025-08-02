@@ -13,7 +13,7 @@ const Navbar = () => {
   const tabs = [
     { label: "Nearhive", href: "/" },
     { label: "Community", href: "/community" },
-    { label: "Team", href: "/team" },
+    { label: "Team", href: "" },
     { label: "Hive Blogs", href: "/hiveblogs" },
   ];
 
@@ -85,9 +85,8 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* 📱 Mobile Navbar */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 bg-black flex items-center justify-between px-4 py-2 z-50">
-        <div className="flex items-center gap-7">
+      <div className="lg:hidden right-0 bg-black flex items-center w-full justify-between px-4 py-2 z-50">
+        <div className="flex items-center gap-5">
           <Link
             href="https://play.google.com/store/apps/details?id=com.deliverybuzz.hive&hl=en"
             target="_blank"
@@ -113,7 +112,7 @@ const Navbar = () => {
         </Link>
 
         <button onClick={() => setIsMenuOpen(true)}>
-          <Image src="/assets/bars.svg" alt="Menu" width={24} height={24} />
+          <Image src="/assets/bars.svg" alt="Menu" width={24} height={24} className="m-2" />
         </button>
       </div>
 
@@ -177,7 +176,7 @@ const Navbar = () => {
           <Link href="/team" className="flex items-center justify-center">
             <Image
               src={
-                pathname === "/team"
+                pathname === ""
                   ? "/assets/Vector (2).svg"
                   : "/assets/Vector-1.svg"
               }

@@ -17,12 +17,10 @@ const Component1 = () => {
   return (
     <>
       <div className="text-center text-black px-4 mt-10">
-        <h2 className="text-2xl font-extrabold">
-          We are the World&apos;s First social experience
-          <br />
-          Delivery App
+        <h2 className="text-2xl font-extrabold ">
+          We are the World&apos;s First social experience Delivery App
         </h2>
-        <p className="font-light text-sm mt-2 max-w-xl mx-auto">
+        <p className="font-medium text-sm mt-2 max-w-xl mx-auto">
           Our Curated Baskets make your work easy and affordable, combining top
           talent and the right tools to speed up your projects.
         </p>
