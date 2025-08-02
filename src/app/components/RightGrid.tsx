@@ -101,8 +101,8 @@ const RightImageGrid: React.FC<RightImageGridProps> = ({ restaurant }) => {
 
                 <Image
                   src={image}
-                  width={96}
-                  height={96}
+                  width={800}
+                  height={800}
                   alt={`${restaurant.name} food ${index + 1}`}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 z-0"
                 />
@@ -114,13 +114,6 @@ const RightImageGrid: React.FC<RightImageGridProps> = ({ restaurant }) => {
                 <div className="absolute bottom-3 left-2 text-white text-base font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
                   Handi chicken dum biryani at your table by clock tower
                 </div>
-              </div>
-
-              <div className="flex items-center gap-2 px-3 py-2 border-t bg-white">
-                <div className="w-5 h-5 bg-gray-400 rounded-full" />
-                <span className="text-sm font-medium text-gray-800">
-                  Kunal Deb
-                </span>
               </div>
             </div>
           );

@@ -8,8 +8,8 @@ function Blogcomponent() {
         <Image
           className="w-full h-48 object-cover p-4 md:p-0"
           src="/assets/photo.png"
-          width={72}
-          height={72}
+          width={450}
+          height={450}
           alt="Blog Image"
         />
         <div className="p-10">

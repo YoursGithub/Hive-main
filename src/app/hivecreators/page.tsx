@@ -13,10 +13,10 @@ function Hivecreators() {
         <div>
           <div className="bg-black gap-10 mt-5">
             <div className="flex flex-col md:flex-row gap-36 justify-center p-10 items-center">
-              <div className="text-white space-y-5 mt-10">
+              <div className="text-white space-y-5 mt-28 lg:mt-10">
                 <p className="text-xs">HIVE BLOG</p>
-                <h2 className="text-4xl">Join as a creator and earn!</h2>
-                <p className="text-xl lg:text-sm">
+                <h2 className="text-3xl whitespace-nowrap font-extrabold">Join as a creator and earn!</h2>
+                <p className="text-lg lg:text-sm lg:mt-0 mt-10">
                   Join as a NearHive creator and earn credits, offers, goodies
                   and many more by <br /> contributing to NearHive community.
                   Join as a NearHive creator and earn <br /> credits, offers,
@@ -25,11 +25,20 @@ function Hivecreators() {
                 </p>
               </div>
 
-              <div className="lg:mt-10 mt-0 ">
+              <div className="lg:mt-10 mt-0 hidden lg:block">
                 <Image
                   src="/assets/money.png"
-                  width={250}
-                  height={250}
+                  width={450}
+                  height={450}
+                  alt=""
+                  className="ml-auto w-64"
+                />
+              </div>
+              <div className="lg:mt-10 mt-0 lg:hidden">
+                <Image
+                  src="/assets/money.svg"
+                  width={450}
+                  height={450}
                   alt=""
                   className="ml-auto"
                 />
@@ -64,42 +73,40 @@ function Hivecreators() {
 
         <section className="px-4 py-10 space-y-10 max-w-4xl mx-auto">
           <div className="bg-gray-100 p-6 rounded-lg shadow-sm md:flex justify-center items-center text-center md:text-left">
-  <div className="md:w-2/3 mt-4 md:mt-0 md:pl-6 flex flex-col items-center md:items-start">
-    <h3 className="text-lg font-semibold text-gray-900">
-      Earn Hive Points and Spend
-    </h3>
-    <p className="text-xs text-gray-600 mr-0 md:mr-20 mt-3">
-      Join as a NearHive creator and earn credits, offers, goodies and
-      many more by contributing to NearHive community. Join as a
-      NearHive creator and earn credits, offers, goodies and many more
-      by contributing to NearHive community.
-    </p>
-  </div>
+            <div className="md:w-2/3 mt-4 md:mt-0 md:pl-6 flex flex-col items-center md:items-start">
+              <h3 className="text-lg font-semibold text-gray-900">
+                Earn Hive Points and Spend
+              </h3>
+              <p className="text-xs text-gray-600 mr-0 md:mr-20 mt-3">
+                Join as a NearHive creator and earn credits, offers, goodies and
+                many more by contributing to NearHive community. Join as a
+                NearHive creator and earn credits, offers, goodies and many more
+                by contributing to NearHive community.
+              </p>
+            </div>
 
-  <div className="mt-4 md:mt-0 flex justify-center">
-    <Image src="/assets/image3.png" width={300} height={300} alt="" />
-  </div>
-</div>
-
+            <div className="mt-4 md:mt-0 flex justify-center">
+              <Image src="/assets/image3.png" width={300} height={300} alt="" />
+            </div>
+          </div>
 
           <div className="bg-gray-100 p-6 rounded-lg shadow-sm md:flex justify-between items-center text-center md:text-left">
-  <div className="flex justify-center md:block">
-    <Image src="/assets/image3.png" width={300} height={300} alt="" />
-  </div>
+            <div className="flex justify-center md:block">
+              <Image src="/assets/image3.png" width={300} height={300} alt="" />
+            </div>
 
-  <div className="md:w-2/3 mt-4 md:mt-0 md:pl-6 flex flex-col items-center md:items-start">
-    <h3 className="text-lg font-semibold text-gray-900">
-      Earn Hive Points and Spend
-    </h3>
-    <p className="text-xs text-gray-600 mt-3">
-      Join as a NearHive creator and earn credits, offers, goodies and
-      many more by contributing to NearHive community. Join as a
-      NearHive creator and earn credits, offers, goodies and many more
-      by contributing to NearHive community.
-    </p>
-  </div>
-</div>
-
+            <div className="md:w-2/3 mt-4 md:mt-0 md:pl-6 flex flex-col items-center md:items-start">
+              <h3 className="text-lg font-semibold text-gray-900">
+                Earn Hive Points and Spend
+              </h3>
+              <p className="text-xs text-gray-600 mt-3">
+                Join as a NearHive creator and earn credits, offers, goodies and
+                many more by contributing to NearHive community. Join as a
+                NearHive creator and earn credits, offers, goodies and many more
+                by contributing to NearHive community.
+              </p>
+            </div>
+          </div>
         </section>
       </section>
 

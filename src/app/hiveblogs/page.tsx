@@ -30,17 +30,15 @@ const Hiveblogs = () => {
     },
   };
 
-const currentContent = contents[activeContent as keyof typeof contents];
+  const currentContent = contents[activeContent as keyof typeof contents];
 
   const renderThumbnails = () => (
     <>
       <div
-        className={`w-32 overflow-hidden cursor-pointer transition-all duration-300 hover:scale-105 ${
-          activeContent === "creator" ? "" : ""
-        } bg-white`}
+        className={`w-20 overflow-hidden cursor-pointer transition-all duration-300 hover:scale-105 bg-white`}
         onClick={() => setActiveContent("creator")}
       >
-        <div className="w-full h-32 relative">
+        <div className="w-full h-20 relative">
           <Image
             src="/assets/Rectangle 3699.png"
             alt="Hive Creator"
@@ -48,18 +46,16 @@ const currentContent = contents[activeContent as keyof typeof contents];
             objectFit="cover"
           />
         </div>
-        <div className="p-2 text-center text-black font-semibold text-xs leading-tight">
+        <div className="p-2 hidden lg:block text-center text-black font-semibold text-[10px] whitespace-nowrap leading-tight">
           Join as a <br /> NearHive Creator
         </div>
       </div>
 
       <div
-        className={`w-32 overflow-hidden cursor-pointer transition-all duration-300 hover:scale-105 ${
-          activeContent === "ecosystem" ? "" : ""
-        } bg-white`}
+        className={`w-20 overflow-hidden cursor-pointer transition-all duration-300 hover:scale-105 bg-white`}
         onClick={() => setActiveContent("ecosystem")}
       >
-        <div className="w-full h-32 relative">
+        <div className="w-full h-20 relative">
           <Image
             src="/assets/Rectangle 3699.png"
             alt="Hive Ecosystem"
@@ -67,7 +63,7 @@ const currentContent = contents[activeContent as keyof typeof contents];
             objectFit="cover"
           />
         </div>
-        <div className="p-2 text-center text-black font-semibold text-xs leading-tight">
+        <div className="p-2 hidden lg:block text-center text-black text-[10px] whitespace-nowrap font-semibold text-xs leading-tight">
           Creating an <br />
           ecosystem of <br />
           Hive services
@@ -79,24 +75,25 @@ const currentContent = contents[activeContent as keyof typeof contents];
   return (
     <>
       <Navbar />
-      <div className="min-h-screen p-0">
-        <div className="max-w-7xl mx-auto bg-white min-h-[500px] flex flex-col md:flex-row">
-          <div className="lg:mt-40 mt-6 mx-auto relative">
+      <div className="min-h-screen p-1">
+        <div className="max-w-7xl mx-auto bg-white min-h-[500px] flex flex-col md:flex-row mt-24 lg:mt-0">
+          <div className="lg:mt-40 mt-6 mx-auto flex flex-row items-start gap-4">
             <Image
               src="/assets/photo.png"
-              width={400}
-              height={400}
+              width={800}
+              height={800}
               alt="Main"
+              className="object-cover w-[300px] lg:w-[400px] h-44 lg:h-64"
             />
 
-            {/* Mobile Thumbnails (Below image) */}
-            <div className="md:hidden flex justify-center gap-4 mt-4">
-              {renderThumbnails()}
+            <div className="lg:hidden">
+              <div className="flex flex-col justify-start gap-4">
+                {renderThumbnails()}
+              </div>
             </div>
           </div>
 
           <div className="flex-1 px-12 py-16 bg-white lg:text-left text-center relative flex flex-col justify-center">
-            {/* Main Content */}
             <div className="max-w-md">
               <h1 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
                 {currentContent.title}
@@ -115,7 +112,6 @@ const currentContent = contents[activeContent as keyof typeof contents];
               </button>
             </div>
 
-            {/* Desktop Thumbnails (Right side) */}
             <div className="hidden md:flex absolute right-10 top-1/2 transform -translate-y-1/2 flex-col gap-4">
               {renderThumbnails()}
             </div>
@@ -124,74 +120,75 @@ const currentContent = contents[activeContent as keyof typeof contents];
 
         <div className="text-center py-10">
           <p className="text-xl text-black font-medium max-w-lg mx-auto">
-            Damn guys, we&apos;ve achieved so many things. You should read some, its
-            interesting ;)
+            Damn guys, we&apos;ve achieved so many things. You should read some,
+            its interesting ;)
           </p>
         </div>
+      </div>
 
-        <section>
-          <div className="text-center bg-black gap-10 p-10">
-            <div className="space-y-10">
-              <div className="text-white">
-                <h2 className="text-3xl">don’t just order, have fun</h2>
-                <p className="text-sm mt-5 max-w-md mx-auto text-center">
-                  Join as a NearHive creator and earn credits, offers, goodies
-                  and many more by contributing to NearHive community. Join as a
-                  NearHive creator and earn credits, offers, goodies and many
-                  more by contributing to NearHive community.
-                </p>
-              </div>
-
-              <div className="flex justify-center">
-                <Image
-                  src="/assets/photo.png"
-                  width={500}
-                  height={500}
-                  alt="Fun Section"
-                />
-              </div>
-
-              <div className="p-3 text-black bg-amber-400 w-52 whitespace-nowrap mx-auto mt-10">
-                Read full blog
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="mt-20">
-          <div className="text-black text-center">
+      {/* ✅ Fixed full-width black section */}
+      <section className="w-full bg-black text-center py-16">
+        <div className="space-y-10">
+          <div className="text-white px-4">
             <h2 className="text-3xl">don’t just order, have fun</h2>
-            <p className="text-sm mt-2 text-[#313131]">
+            <p className="text-sm mt-5 max-w-md mx-auto text-center">
               Join as a NearHive creator and earn credits, offers, goodies and
-              many more by <br /> contributing to NearHive community.
+              many more by contributing to NearHive community. Join as a
+              NearHive creator and earn credits, offers, goodies and many more
+              by contributing to NearHive community.
             </p>
           </div>
 
-          <div>
-            <Hiveblog />
-            <Hiveblog2 />
-            <Hiveblog />
-          </div>
-        </section>
-
-        <section className="mt-20">
-          <div className="text-center text-black">
-            <p className="text-sm">HIVE BLOGS</p>
-            <h2 className="text-xl">
-              Join as a NearHive creator and earn credits, offers, goodies.
-            </h2>
+          <div className="flex justify-center">
+            <Image
+              src="/assets/photo.png"
+              width={500}
+              height={500}
+              alt="Fun Section"
+            />
           </div>
 
-          <div className="max-w-5xl text-center mt-10 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Blogcomponent />
-            <Blogcomponent />
-            <Blogcomponent />
-            <Blogcomponent />
-            <Blogcomponent />
-            <Blogcomponent />
+          <div className="p-3 text-black bg-amber-400 w-52 whitespace-nowrap mx-auto mt-10">
+            Read full blog
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+
+      {/* Rest of the sections */}
+      <section className="mt-20">
+        <div className="text-black text-center">
+          <h2 className="text-3xl">don’t just order, have fun</h2>
+          <p className="text-sm mt-2 text-[#313131]">
+            Join as a NearHive creator and earn credits, offers, goodies and
+            many more by <br /> contributing to NearHive community.
+          </p>
+        </div>
+
+        <div>
+          <Hiveblog />
+          <Hiveblog2 />
+          <Hiveblog />
+        </div>
+      </section>
+
+      <section className="mt-20">
+        <div className="text-center text-black">
+          <p className="text-sm">HIVE BLOGS</p>
+          <h2 className="text-xl">
+            Join as a NearHive creator and earn credits, offers, goodies.
+          </h2>
+        </div>
+
+        <div className="max-w-5xl text-center mt-10 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <Blogcomponent />
+          <Blogcomponent />
+          <Blogcomponent />
+          <Blogcomponent />
+          <Blogcomponent />
+          <Blogcomponent />
+        </div>
+      </section>
+
       <Footer />
     </>
   );

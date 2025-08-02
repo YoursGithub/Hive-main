@@ -9,6 +9,7 @@ import Footer from "./components/footer";
 import Button from "./components/button";
 import HiveCreator from "./components/HiveCreator";
 import How from "./components/How";
+import Crave from "./components/Crave";
 
 const HiveHomepage = () => {
   const [mounted, setMounted] = useState(false);
@@ -52,7 +53,7 @@ const HiveHomepage = () => {
     <div className="min-h-screen overflow-x-hidden bg-white relative">
       <Navbar />
 
-      <main className="relative flex flex-col items-center justify-center px-6 pt-24">
+      <main className="relative flex flex-col items-center justify-center mt-36 lg:mt-0 px-6 pt-24">
         <div className="relative flex flex-col items-center justify-center">
           <div className="relative w-[200px] h-[80px] flex justify-between mb-2">
             <Image
@@ -98,7 +99,7 @@ const HiveHomepage = () => {
       <section>
         <div className="flex justify-center z-0">
           <Image
-            src="/assets/mobile.png"
+            src="/assets/mobile.svg"
             width={480}
             height={480}
             alt="Mobile"
@@ -150,7 +151,6 @@ const HiveHomepage = () => {
       </section>
 
       <How />
-
       <section>
         <Component1 />
       </section>
@@ -159,55 +159,7 @@ const HiveHomepage = () => {
         <Component2 />
       </section>
 
-      <section className="container hidden md:block">
-        <div className="flex lg:gap-56">
-          <div className="lg:mt-40 mt-0">
-            <Image
-              src="/assets/sidemob.png"
-              alt="icon1"
-              width={440}
-              height={440}
-              className=""
-            />
-          </div>
-
-          <div className="mt-96 flex ml-44 2xl:ml-96">
-            <h2 className="text-black font-extrabold text-2xl whitespace-nowrap">
-              Scroll posts like
-            </h2>
-            <div className="">
-              <Image
-                src="/assets/insta.png"
-                alt=""
-                width={150}
-                height={40}
-                className="mt-[-55px] absolute"
-              />
-            </div>
-            <br />
-
-            <div>
-              <h2 className="text-black ml-[-70px] font-extrabold text-2xl whitespace-nowrap text-right">
-                and order <br /> whichever item you crave for
-              </h2>
-
-              <div className="">
-                <div className="bg-[#F1B729] w-[450px] h-36 text-center text-black ml-[-180px] mt-6 p-2 max-w-screen absolute">
-                  <p className="text-sm">
-                    Our Curated Baskets make your work easy and affordable,
-                    combining top talent and the right tools to speed up your
-                    projects. Our Curated Baskets make your work easy and
-                    affordable, combining top talent and the right tools to
-                    speed up your projects. Our Curated Baskets make your work
-                    easy and affordable, combining top talent and the right
-                    tools to speed up your projects.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Crave />
 
       <HiveCreator />
 
@@ -319,12 +271,11 @@ const HiveHomepage = () => {
         </div>
       </section>
 
-
       <div className="text-center pt-8 lg:hidden md:block mb-10">
-          <p className="text-lg uppercase text-black tracking-wider">
-            ©ALL RIGHTS RESERVED 2025
-          </p>
-        </div>
+        <p className="text-lg uppercase text-black tracking-wider">
+          ©ALL RIGHTS RESERVED 2025
+        </p>
+      </div>
       <Footer />
     </div>
   );

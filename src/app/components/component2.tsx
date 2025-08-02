@@ -6,8 +6,8 @@ const component2 = () => {
     <>
       <section className="mt-20 flex justify-center container">
         <div className="flex flex-col md:flex-row items-center md:items-start">
-          <div className="mt-20 text-center md:text-left">
-            <h2 className="text-3xl m-2 md:m-0 text-black font-extrabold relative">
+          <div className="mt-20">
+            <h2 className="text-xl lg:text-3xl p-3 text-center lg:text-left md:m-0 text-black font-extrabold relative">
               Explore <span className="parallelogram-highlight">cuisines</span>{" "}
               and learn some great <br className="hidden md:block" />
               facts about them
@@ -39,8 +39,8 @@ const component2 = () => {
                     <Image
                       src="/assets/image1.png"
                       alt="Indian Food"
-                      width={25}
-                      height={25}
+                      width={100}
+                      height={100}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -48,7 +48,7 @@ const component2 = () => {
                     <h3 className="text-base font-semibold text-black">
                       Indian
                     </h3>
-                    <p className="text-xs text-[#AEAEAE] mt-1">
+                    <p className="text-xs text-[#AEAEAE] whitespace-nowrap mt-1">
                       Biriyani, Naan, Roti
                     </p>
                   </div>
@@ -59,8 +59,8 @@ const component2 = () => {
                     <Image
                       src="/assets/pngwing.com (5).png"
                       alt="Japanese Food"
-                      width={25}
-                      height={25}
+                      width={100}
+                      height={100}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -68,7 +68,7 @@ const component2 = () => {
                     <h3 className="text-base font-semibold text-black">
                       Japanese
                     </h3>
-                    <p className="text-xs text-[#AEAEAE] mt-1">
+                    <p className="text-xs text-[#AEAEAE] whitespace-nowrap mt-1">
                       Noodles, Dumplings
                     </p>
                   </div>
@@ -79,8 +79,8 @@ const component2 = () => {
                     <Image
                       src="/assets/pngwing.com (1).png"
                       alt="Chinese Food"
-                      width={25}
-                      height={25}
+                      width={100}
+                      height={100}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -88,7 +88,7 @@ const component2 = () => {
                     <h3 className="text-base font-semibold text-black">
                       Chinese
                     </h3>
-                    <p className="text-xs text-[#AEAEAE] mt-1">
+                    <p className="text-xs text-[#AEAEAE] whitespace-nowrap mt-1">
                       Noodles, Dumplings
                     </p>
                   </div>
@@ -99,14 +99,14 @@ const component2 = () => {
                     <Image
                       src="/assets/pngwing.com (2).png"
                       alt="Thai Food"
-                      width={25}
-                      height={25}
+                      width={100}
+                      height={100}
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div>
                     <h3 className="text-base font-semibold text-black">Thai</h3>
-                    <p className="text-xs text-[#AEAEAE] mt-1">
+                    <p className="text-xs text-[#AEAEAE] whitespace-nowrap mt-1">
                       Thukpa, Sea Salad
                     </p>
                   </div>
@@ -117,8 +117,8 @@ const component2 = () => {
                     <Image
                       src="/assets/pngwing.com (6).png"
                       alt="Italian Food"
-                      width={25}
-                      height={25}
+                      width={100}
+                      height={100}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -126,7 +126,7 @@ const component2 = () => {
                     <h3 className="text-base font-semibold text-black">
                       Italian
                     </h3>
-                    <p className="text-xs text-[#AEAEAE] mt-1">
+                    <p className="text-xs text-[#AEAEAE] whitespace-nowrap mt-1">
                       Pasta, Pizza, Lasagna
                     </p>
                   </div>
@@ -137,8 +137,8 @@ const component2 = () => {
                     <Image
                       src="/assets/pngwing.com (9).png"
                       alt="American Food"
-                      width={25}
-                      height={25}
+                      width={100}
+                      height={100}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -146,7 +146,7 @@ const component2 = () => {
                     <h3 className="text-base font-semibold text-black">
                       American
                     </h3>
-                    <p className="text-xs text-[#AEAEAE] mt-1">
+                    <p className="text-xs text-[#AEAEAE] whitespace-nowrap mt-1">
                       Biriyani, Naan, Roti
                     </p>
                   </div>
@@ -158,9 +158,9 @@ const component2 = () => {
                   <Image
                     src="/assets/iPhone 16 Pro.png"
                     alt="icon3"
-                    width={250}
-                    height={250}
-                    className="mt-[-130px] md:mt-[-130px] mx-auto"
+                    width={800}
+                    height={800}
+                    className="mt-[-130px] w-[250px] md:mt-[-130px] mx-auto"
                   />
                 </div>
 

@@ -31,10 +31,10 @@ function HiveCreator() {
 
             <Image
               src="/assets/money.png"
-              width={250}
-              height={250}
+              width={450}
+              height={450}
               alt="Rewards"
-              className="absolute right-20 top-14 z-0 pointer-events-none"
+              className="absolute w-64 right-20 top-14 z-0 pointer-events-none"
             />
           </div>
 
@@ -82,16 +82,22 @@ function HiveCreator() {
           
         <div className="flex justify-center gap-6 mt-10 mb-60">
             <Image
-              src="/assets/money.png"
-              width={250}
-              height={250}
+              src="/assets/money.svg"
+              width={450}
+              height={450}
               alt="Rewards"
               className=" z-0 pointer-events-none"
             />
           </div>
         </div>
-
+        
       </section>
+      <div
+  className="bg-[#F1B729] w-full lg:mt-[-40px]  h-2 ml-10"
+  style={{
+    clipPath: "polygon(20px 0%, 100% 0%, 100% 100%, 0% 100%)",
+  }}
+></div>
     </>
   );
 }

@@ -110,7 +110,7 @@ const Community = () => {
     <>
       <Navbar />
 
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col lg:flex-row mt-20 lg:mt-0">
         <div className="text-black lg:ml-10 mt-8">
           <div className="ml-5">
             <h2 className="text-xl">Hive Store</h2>

@@ -1,10 +1,16 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from "next/image";
+import React from "react";
 
 function How() {
   return (
     <>
-        <section className="hidden lg:block w-full px-6 md:px-20 py-14 bg-white relative overflow-hidden">
+      <div
+        className="bg-[#F1B729] w-full h-2 ml-10"
+        style={{
+          clipPath: "polygon(20px 0%, 100% 0%, 100% 100%, 0% 100%)",
+        }}
+      ></div>
+      <section className="hidden lg:block w-full px-6 md:px-20 py-14 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-[22px] md:text-[24px] font-bold text-black max-w-[450px] leading-snug">
             Not Just Another Delivery App, This one&apos;s Interesting
@@ -26,8 +32,7 @@ function How() {
         </div>
       </section>
 
-
-      <section className='lg:hidden'>
+      <section className="lg:hidden">
         <div className="mx-auto">
           <h2 className="text-[22px] text-center mt-10 md:text-[24px] font-bold text-black max-w-[450px] leading-snug">
             Not Just Another Delivery App, This one&apos;s Interesting
@@ -49,7 +54,7 @@ function How() {
         </div>
       </section>
     </>
-  )
+  );
 }
 
-export default How
+export default How;
