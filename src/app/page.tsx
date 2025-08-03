@@ -12,9 +12,22 @@ import How from "./components/How";
 import Crave from "./components/Crave";
 import Hiveverse from "./components/Hiveverse";
 import RestaurantLeaderboard from "./components/Restaurantboard";
+import { fetchBlogs, fetchBlogsById } from "@/services/blogs";
 
 const HiveHomepage = () => {
   const [mounted, setMounted] = useState(false);
+
+  const datafn = async () => {
+    console.log(await fetchBlogs(),
+
+    await fetchBlogsById("31eb8a4b-0949-44ae-8b19-d9aa69cad08d")
+  
+  );
+  };
+
+  useEffect(() => {
+    datafn();
+  }, []);
 
   useEffect(() => {
     setMounted(true);
