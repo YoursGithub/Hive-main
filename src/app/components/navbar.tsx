@@ -129,10 +129,10 @@ const Navbar = () => {
           </div>
 
           <div className="flex-1 text-white flex flex-col items-center justify-center space-y-8 text-lg font-semibold">
-            <Link href="" onClick={() => setIsMenuOpen(false)}>Report us</Link>
-            <Link href="" onClick={() => setIsMenuOpen(false)}>Need help?</Link>
-            <Link href="" onClick={() => setIsMenuOpen(false)}>Terms and conditions</Link>
-            <Link href="" onClick={() => setIsMenuOpen(false)}>Privacy Policy</Link>
+            <Link href="/report" onClick={() => setIsMenuOpen(false)}>Report us</Link>
+            <Link href="/" onClick={() => setIsMenuOpen(false)}>Need help?</Link>
+            <Link href="/legals" onClick={() => setIsMenuOpen(false)}>Terms and conditions</Link>
+            <Link href="/privacy" onClick={() => setIsMenuOpen(false)}>Privacy Policy</Link>
           </div>
 
           <div className="flex justify-center gap-6 pb-8">

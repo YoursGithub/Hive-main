@@ -16,7 +16,13 @@ const Community = () => {
       points: "120 points",
       logo: "🏪",
       images: [
+            "/assets/imagee.png",
         "/assets/imagee.png",
+        "/assets/imagee.png",
+        "/assets/imagee.png",
+        "/assets/imagee.png",
+        "/assets/imagee.png",
+            "/assets/imagee.png",
         "/assets/imagee.png",
         "/assets/imagee.png",
         "/assets/imagee.png",
