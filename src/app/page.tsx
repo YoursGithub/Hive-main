@@ -16,7 +16,7 @@ import { fetchBlogs, fetchBlogsById } from "@/services/blogs";
 
 const HiveHomepage = () => {
   const [mounted, setMounted] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
 
   const datafn = async () => {
     console.log(await fetchBlogs(),
