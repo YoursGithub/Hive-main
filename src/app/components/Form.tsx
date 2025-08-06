@@ -1,59 +1,156 @@
-import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
+"use client";
+
+import React, { useState } from "react";
+import { ArrowUpRight } from "lucide-react";
+import { createHiveCreator } from "@/services/hivecreator";
+import { useSearchParams } from "next/navigation";
 
 const Form = () => {
+
+    const searchParams = useSearchParams();
+  const userId = searchParams.get("userId");
+
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    link: "",
+    about: "",
+    cuisines: [] as string[],
+    favoriteCafe: "",
+    favoriteFood: "",
+  });
+
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleCuisineChange = (cuisine: string) => {
+    setFormData((prev) => {
+      const cuisines = prev.cuisines.includes(cuisine)
+        ? prev.cuisines.filter((c) => c !== cuisine)
+        : [...prev.cuisines, cuisine];
+      return { ...prev, cuisines };
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Form Data:", formData);
+    // Add API call or further processing
+
+    try {
+      
+
+    await createHiveCreator(userId, {
+      description: formData.about,
+      email: formData.email,
+      favfood: formData.favoriteFood,
+      name: formData.name,
+      phone: formData.phone,
+      social: formData.link,
+      store: formData.favoriteCafe,
+      cuisines : formData.cuisines
+    });
+
+    
+    } catch (error) {
+      
+    }
+
+  };
   return (
     <>
       <div className="text-center text-black">
         <h2 className="text-4xl font-bold">Fill the Form</h2>
         <p className="mt-4 text-sm">
-          Fill up the following details so that we can <br /> add you as a creator to our system
+          Fill up the following details so that we can <br /> add you as a
+          creator to our system
         </p>
       </div>
 
-        <form className="max-w-3xl text-black mx-auto mt-10 space-y-6 px-4">  
+      <form
+        className="max-w-3xl text-black mx-auto mt-10 space-y-6 px-4"
+        onSubmit={handleSubmit}
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label className="block text-sm font-medium text-gray-700">Name (Full Name)</label>
+            <label className="block text-sm font-medium text-gray-700">
+              Name (Full Name)
+            </label>
             <input
               type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
               className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-black"
+              required
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">Ph. Number (Used while registering on Nearhive)</label>
+            <label className="block text-sm font-medium text-gray-700">
+              Ph. Number (Used while registering on Nearhive)
+            </label>
             <input
               type="text"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
               className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-black"
+              required
+
             />
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label className="block text-sm font-medium text-gray-700">Email</label>
+            <label className="block text-sm font-medium text-gray-700">
+              Email
+            </label>
             <input
               type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
               className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-black"
-            />
+              required
+              />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">Link (Instagram/ Facebook)</label>
+            <label className="block text-sm font-medium text-gray-700">
+              Link (Instagram/ Facebook)
+            </label>
             <input
               type="text"
+              name="link"
+              value={formData.link}
+              onChange={handleChange}
               className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-black"
+              required
+
+
             />
           </div>
         </div>
 
         <div>
           <label className="block text-sm font-medium text-gray-700">
-            Tell us something interesting about yourself (we really do read it and if we find something interesting, we might give you a surprise too)
+            Tell us something interesting about yourself
           </label>
           <textarea
             rows={4}
+            name="about"
+            value={formData.about}
+            onChange={handleChange}
             className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-black"
             placeholder="Write here..."
+            required
+
           ></textarea>
         </div>
 
@@ -62,9 +159,22 @@ const Form = () => {
             What’s Your Favorite Cuisines? (you can choose more than 1)
           </label>
           <div className="flex flex-wrap gap-4">
-            {['North Indian', 'South Indian', 'Japanese', 'Thai', 'Chinese', 'Italian', 'American'].map((item) => (
+            {[
+              "North Indian",
+              "South Indian",
+              "Japanese",
+              "Thai",
+              "Chinese",
+              "Italian",
+              "American",
+            ].map((item) => (
               <label key={item} className="inline-flex items-center space-x-2">
-                <input type="checkbox" className="form-checkbox text-black" />
+                <input
+                  type="checkbox"
+                  checked={formData.cuisines.includes(item)}
+                  onChange={() => handleCuisineChange(item)}
+                  className="form-checkbox text-black"
+                />
                 <span className="text-sm">{item}</span>
               </label>
             ))}
@@ -78,8 +188,13 @@ const Form = () => {
             </label>
             <input
               type="text"
+              name="favoriteCafe"
+              value={formData.favoriteCafe}
+              onChange={handleChange}
               className="block w-full border border-gray-300 rounded-md mt-2 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-black"
               placeholder="Your favorite cafe/restaurant"
+              required
+
             />
           </div>
 
@@ -89,8 +204,13 @@ const Form = () => {
             </label>
             <input
               type="text"
+              name="favoriteFood"
+              value={formData.favoriteFood}
+              onChange={handleChange}
               className="block w-full border border-gray-300 mt-2 rounded-md px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-black"
               placeholder="Your favorite food item"
+              required
+
             />
           </div>
 
