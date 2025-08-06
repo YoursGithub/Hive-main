@@ -7,6 +7,7 @@ import Image from "next/image";
 import Hiveblog from "../components/hiveblog1";
 import Hiveblog2 from "../components/hiveblog2";
 import Blogcomponent from "../components/Blogcomponent";
+import { ArrowUpRight } from "lucide-react";
 
 const Hiveblogs = () => {
   const [activeContent, setActiveContent] = useState("creator");
@@ -18,7 +19,7 @@ const Hiveblogs = () => {
         "Join as a NearHive creator and earn credits, offers, goodies and many more by contributing to NearHive community. Join as a NearHive creator and earn credits, offers, goodies and many more by contributing to NearHive community.",
       description2:
         "Join as a NearHive creator and earn credits, offers, goodies and many more by contributing to NearHive community. Join as a NearHive creator and earn credits, offers, goodies and many more by contributing to NearHive community. Join as a NearHive creator and earn credits, offers, goodies and many more by contributing >",
-      buttonText: "Read Full Blog →",
+      buttonText: "Read Full Blog ",
     },
     ecosystem: {
       title: "Creating an ecosystem of Hive services",
@@ -44,7 +45,7 @@ const Hiveblogs = () => {
             alt="Hive Creator"
             layout="fill"
             objectFit="cover"
-            className="pr-2"
+            className=""
           />
         </div>
         <div className="p-2 hidden lg:block text-center text-black font-semibold text-[10px] whitespace-nowrap leading-tight">
@@ -62,7 +63,7 @@ const Hiveblogs = () => {
             alt="Hive Ecosystem"
             layout="fill"
             objectFit="cover"
-            className="pr-2"
+            className=""
           />
         </div>
         <div className="p-2 hidden lg:block text-center text-black text-[10px] whitespace-nowrap font-semibold text-xs leading-tight">
@@ -78,7 +79,7 @@ const Hiveblogs = () => {
     <>
       <Navbar />
       <div className="min-h-screen p-1">
-        <div className="max-w-7xl mx-auto bg-white min-h-[500px] flex flex-col md:flex-row mt-24 lg:mt-0">
+        <div className="max-w-7xl mx-auto bg-white min-h-[500px] flex flex-col md:flex-row mt-10 lg:mt-0">
           <div className="lg:mt-40 mt-6 mx-auto flex flex-row items-start gap-2">
             <Image
               src="/assets/photo.png"
@@ -110,7 +111,7 @@ const Hiveblogs = () => {
               </p>
 
               <button className="bg-[#F1B729] text-black px-7 py-3.5 rounded-lg font-semibold transition-all duration-200 inline-flex items-center gap-2">
-                {currentContent.buttonText} →
+                {currentContent.buttonText} <ArrowUpRight className="w-4 h-4" />
               </button>
             </div>
 

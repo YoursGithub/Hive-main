@@ -16,6 +16,7 @@ import { fetchBlogs, fetchBlogsById } from "@/services/blogs";
 
 const HiveHomepage = () => {
   const [mounted, setMounted] = useState(false);
+  // const [isLoading, setIsLoading] = useState(true);
 
   const datafn = async () => {
     console.log(await fetchBlogs(),
@@ -67,7 +68,6 @@ const HiveHomepage = () => {
   return (
     <div className="min-h-screen overflow-x-hidden bg-white relative">
       <Navbar />
-
       <main className="relative flex flex-col items-center justify-center mt-36 lg:mt-0 px-6 pt-24">
         <div className="relative flex flex-col items-center justify-center">
           <div className="relative w-[200px] h-[80px] flex justify-between mb-2">
@@ -125,7 +125,7 @@ const HiveHomepage = () => {
         <div className="bg-[#0A0A0A] mt-[-200px] text-white relative lg:min-h-[400px] min-h-[700px] flex items-center">
           <div className="max-w-4xl mx-auto text-center px-6 relative">
             <h2 className="text-[27px] font-bold lg:mt-[-100px] mt-[-250px]">
-              <span className="text-yellow-500">#</span>don&apos;t just order,
+              <span className="bg-[#F1B729]">#</span>don&apos;t just order,
               have fun
             </h2>
             <p

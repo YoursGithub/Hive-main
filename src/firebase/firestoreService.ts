@@ -19,7 +19,7 @@ import {
 import { v4 as uuidv4 } from 'uuid';
 import { db, storage } from "@/firebase/firebase-client";
 
-type FirestoreData = Record<string, any>;
+type FirestoreData = Record<string, unknown>;
 
 export const FirestoreService = {
   // 📄 Generate a unique ID
@@ -67,7 +67,7 @@ export const FirestoreService = {
   // 🔎 Get documents with multiple where clauses
    getByConditions : async (
     collectionName: string,
-    conditions: [fieldPath: string, opStr: WhereFilterOp, value: any][] = [],
+    conditions: [fieldPath: string, opStr: WhereFilterOp, value: unknown][] = [],
     orderByFields: { field: string; direction?: "asc" | "desc" }[] = []
   ): Promise<FirestoreData[]> => {
     const ref = collection(db, collectionName);

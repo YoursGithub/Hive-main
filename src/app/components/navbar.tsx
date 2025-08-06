@@ -13,13 +13,12 @@ const Navbar = () => {
   const tabs = [
     { label: "Nearhive", href: "/" },
     { label: "Community", href: "/community" },
-    { label: "Team", href: "" },
+    { label: "Team", href: "/team" },
     { label: "Hive Blogs", href: "/hiveblogs" },
   ];
 
   return (
     <nav className="relative z-50">
-      {/* 🖥️ Desktop Navbar */}
       <div className="hidden lg:flex items-center justify-between max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center space-x-8">
           <Link href="/" className="flex items-center space-x-2">
@@ -129,10 +128,10 @@ const Navbar = () => {
           </div>
 
           <div className="flex-1 text-white flex flex-col items-center justify-center space-y-8 text-lg font-semibold">
-            <Link href="" onClick={() => setIsMenuOpen(false)}>Report us</Link>
-            <Link href="" onClick={() => setIsMenuOpen(false)}>Need help?</Link>
-            <Link href="" onClick={() => setIsMenuOpen(false)}>Terms and conditions</Link>
-            <Link href="" onClick={() => setIsMenuOpen(false)}>Privacy Policy</Link>
+            <Link href="/report" onClick={() => setIsMenuOpen(false)}>Report us</Link>
+            <Link href="/" onClick={() => setIsMenuOpen(false)}>Need help?</Link>
+            <Link href="/legals" onClick={() => setIsMenuOpen(false)}>Terms and conditions</Link>
+            <Link href="/privacy" onClick={() => setIsMenuOpen(false)}>Privacy Policy</Link>
           </div>
 
           <div className="flex justify-center gap-6 pb-8">
@@ -176,8 +175,8 @@ const Navbar = () => {
           <Link href="/team" className="flex items-center justify-center">
             <Image
               src={
-                pathname === ""
-                  ? "/assets/Vector (2).svg"
+                pathname === "/team"
+                  ? "/assets/window.svg"
                   : "/assets/Vector-1.svg"
               }
               alt="Team"
