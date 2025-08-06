@@ -26,13 +26,13 @@ function Crave() {
                 alt=""
                 width={150}
                 height={40}
-                className="mt-[-55px] absolute"
+                className="mt-[-55px] ml-[-5px] absolute"
               />
             </div>
             <br />
 
             <div>
-              <h2 className="text-black ml-[-70px] font-extrabold text-2xl whitespace-nowrap text-right">
+              <h2 className="text-black ml-[-50px] font-extrabold text-2xl whitespace-nowrap text-right">
                 and order <br /> whichever item you crave for
               </h2>
 
@@ -65,7 +65,7 @@ function Crave() {
                   alt=""
                   width={150}
                   height={40}
-                  className="absolute mt-[-87px] ml-44"
+                  className="absolute mt-[-87px] ml-36"
                 />
               </div>
             </h2>

@@ -13,13 +13,12 @@ const Navbar = () => {
   const tabs = [
     { label: "Nearhive", href: "/" },
     { label: "Community", href: "/community" },
-    { label: "Team", href: "" },
+    { label: "Team", href: "/team" },
     { label: "Hive Blogs", href: "/hiveblogs" },
   ];
 
   return (
     <nav className="relative z-50">
-      {/* 🖥️ Desktop Navbar */}
       <div className="hidden lg:flex items-center justify-between max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center space-x-8">
           <Link href="/" className="flex items-center space-x-2">
@@ -176,8 +175,8 @@ const Navbar = () => {
           <Link href="/team" className="flex items-center justify-center">
             <Image
               src={
-                pathname === ""
-                  ? "/assets/Vector (2).svg"
+                pathname === "/team"
+                  ? "/assets/window.svg"
                   : "/assets/Vector-1.svg"
               }
               alt="Team"

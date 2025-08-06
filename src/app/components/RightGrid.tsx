@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Restaurant } from '@/app/types';
 
@@ -21,7 +21,7 @@ const boxHeights = [
 ];
 
 const RightImageGrid: React.FC<RightImageGridProps> = ({ restaurant }) => {
-  const [hovered, setHovered] = useState<number | null>(null);
+  // const [hovered, setHovered] = useState<number | null>(null);
 
   if (!restaurant) {
     return (

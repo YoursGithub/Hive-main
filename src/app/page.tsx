@@ -16,6 +16,7 @@ import { fetchBlogs, fetchBlogsById } from "@/services/blogs";
 
 const HiveHomepage = () => {
   const [mounted, setMounted] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const datafn = async () => {
     console.log(await fetchBlogs(),
@@ -67,7 +68,6 @@ const HiveHomepage = () => {
   return (
     <div className="min-h-screen overflow-x-hidden bg-white relative">
       <Navbar />
-
       <main className="relative flex flex-col items-center justify-center mt-36 lg:mt-0 px-6 pt-24">
         <div className="relative flex flex-col items-center justify-center">
           <div className="relative w-[200px] h-[80px] flex justify-between mb-2">
