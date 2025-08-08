@@ -16,16 +16,15 @@ const Component1 = () => {
   return (
     <>
       <div className="text-center text-black px-4 mt-10">
-        <h2 className="text-2xl font-extrabold">
-          We are the World&apos;s First social experience Delivery App
+        <h2 className="text-[34px] font-extrabold">
+          We are the World&apos;s First social experience <br /> Delivery App
         </h2>
-        <p className="font-medium text-sm mt-2 max-w-xl mx-auto">
+        <p className="font-medium text-sm mt-2 max-w-[560px] mx-auto">
           Our Curated Baskets make your work easy and affordable, combining top
           talent and the right tools to speed up your projects.
         </p>
       </div>
 
-      {/* Mobile layout */}
       <div className="mt-10 mb-20 block md:hidden">
         <div className="w-full h-72">
           <Image
@@ -59,7 +58,6 @@ const Component1 = () => {
         </div>
       </div>
 
-      {/* Desktop layout with HoverExpand */}
       <div className="mt-10 mb-20 hidden md:flex md:justify-center gap-1 px-0 max-w-[25vw] mx-auto scroll-smooth snap-x h-56">
         <HoverExpand
           images={images}

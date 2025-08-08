@@ -16,7 +16,7 @@ const Footer = () => {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-36 mb-12">
           <div>
             <h3 className="text-xs font-medium text-white mb-4 uppercase tracking-wider">
               HIVE BLOGS
@@ -65,7 +65,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          {/* <div>
             <h3 className="text-xs font-medium text-white mb-4 uppercase tracking-wider">
               WORK WITH US
             </h3>
@@ -87,7 +87,7 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           <div>
             <ul className="space-y-3">

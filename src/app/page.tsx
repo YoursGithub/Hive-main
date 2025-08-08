@@ -13,26 +13,28 @@ import Crave from "./components/Crave";
 import Hiveverse from "./components/Hiveverse";
 import RestaurantLeaderboard from "./components/Restaurantboard";
 import { fetchBlogs, fetchBlogsById } from "@/services/blogs";
+import Loader from "./components/Loader";
 
 const HiveHomepage = () => {
-  const [mounted, setMounted] = useState(false);
-  // const [isLoading, setIsLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   const datafn = async () => {
-    console.log(await fetchBlogs(),
-
-    await fetchBlogsById("31eb8a4b-0949-44ae-8b19-d9aa69cad08d")
-  
-  );
+    console.log(
+      await fetchBlogs(),
+      await fetchBlogsById("31eb8a4b-0949-44ae-8b19-d9aa69cad08d")
+    );
   };
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setLoading(false), 2100);
+    return () => clearTimeout(timeout);
+  }, []);
 
   useEffect(() => {
     datafn();
   }, []);
 
   useEffect(() => {
-    setMounted(true);
-
     const style = document.createElement("style");
     style.textContent = `
       @keyframes float1 {
@@ -63,7 +65,7 @@ const HiveHomepage = () => {
     };
   }, []);
 
-  if (!mounted) return null;
+    if (loading) return <Loader />;
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-white relative">
@@ -118,14 +120,14 @@ const HiveHomepage = () => {
             width={480}
             height={480}
             alt="Mobile"
-            className="mt-16 p-10"
+            className="mt-7 p-10"
           />
         </div>
 
         <div className="bg-[#0A0A0A] mt-[-200px] text-white relative lg:min-h-[400px] min-h-[700px] flex items-center">
           <div className="max-w-4xl mx-auto text-center px-6 relative">
             <h2 className="text-[27px] font-bold lg:mt-[-100px] mt-[-250px]">
-              <span className="bg-[#F1B729]">#</span>don&apos;t just order,
+              <span className="text-[#F1B729]">#</span>don&apos;t just order,
               have fun
             </h2>
             <p
@@ -153,7 +155,7 @@ const HiveHomepage = () => {
               </div>
             </div>
 
-            <div className="absolute lg:top-[20px] top-36 right-10  lg:right-[-40%]">
+            <div className="absolute lg:top-[1px] top-36 right-10  lg:right-[-40%]">
               <Image
                 src="/assets/middleman.png"
                 width={300}
@@ -166,7 +168,7 @@ const HiveHomepage = () => {
       </section>
 
       <How />
-      <section>
+      <section className="lg:mt-[-100px]">
         <Component1 />
       </section>
 
@@ -182,7 +184,7 @@ const HiveHomepage = () => {
 
       <section className="mt-40">
         <div className="text-center">
-          <h2 className="text-black text-2xl font-extrabold">
+          <h2 className="text-black text-3xl leading-tight font-extrabold">
             Locations we are currently <br /> operating
           </h2>
           <p className="text-black mt-3 text-sm m-10">

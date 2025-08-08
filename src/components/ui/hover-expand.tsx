@@ -44,11 +44,11 @@ export default function HoverExpand({
 
   return (
     <div className="relative">
-      <div className="mx-auto flex w-fit gap-2 rounded-md pb-20 pt-10 md:gap-3">
+      <div className="mx-auto flex w-fit gap-2 pb-20 pt-10 md:gap-3">
         {images.slice(0, maxThumbnails).map((imageUrl, i) => (
           <div
             key={`image-container-${i}`}
-            className={`group relative overflow-hidden rounded-2xl transition-all duration-300 ${
+            className={`group relative overflow-hidden transition-all duration-300 ${
               selectedIndex === i
                 ? "w-[26rem] h-[16rem]" // expanded image is much wider and taller
                 : "w-16 sm:w-20 md:w-24 xl:w-28 h-[16rem]" // collapsed are also larger

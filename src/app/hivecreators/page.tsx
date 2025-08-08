@@ -1,13 +1,26 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Navbar from "../components/navbar";
 import Image from "next/image";
-import Form from "../components/Form";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Form from "../components/Form"; 
 import Footer from "../components/footer";
 
 function Hivecreators() {
   return (
     <>
       <Navbar />
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
 
       <section>
         <div>
@@ -15,7 +28,9 @@ function Hivecreators() {
             <div className="flex flex-col md:flex-row gap-36 justify-center p-10 items-center">
               <div className="text-white space-y-5 mt-7 lg:mt-10">
                 <p className="text-xs">HIVE BLOG</p>
-                <h2 className="text-3xl whitespace-nowrap font-extrabold">Join as a creator and earn!</h2>
+                <h2 className="text-3xl whitespace-nowrap font-extrabold">
+                  Join as a creator and earn!
+                </h2>
                 <p className="text-lg lg:text-sm lg:mt-0 mt-10">
                   Join as a NearHive creator and earn credits, offers, goodies
                   and many more by <br /> contributing to NearHive community.
@@ -60,7 +75,9 @@ function Hivecreators() {
       </section>
 
       <section className="mt-20">
-        <Form />
+        <Suspense fallback={<div className="text-center py-10">Loading Form...</div>}>
+          <Form />
+        </Suspense>
       </section>
 
       <section className="mt-10">
@@ -79,9 +96,7 @@ function Hivecreators() {
               </h3>
               <p className="text-xs text-gray-600 mr-0 md:mr-20 mt-3">
                 Join as a NearHive creator and earn credits, offers, goodies and
-                many more by contributing to NearHive community. Join as a
-                NearHive creator and earn credits, offers, goodies and many more
-                by contributing to NearHive community.
+                many more by contributing to NearHive community.
               </p>
             </div>
 
@@ -101,9 +116,7 @@ function Hivecreators() {
               </h3>
               <p className="text-xs text-gray-600 mt-3">
                 Join as a NearHive creator and earn credits, offers, goodies and
-                many more by contributing to NearHive community. Join as a
-                NearHive creator and earn credits, offers, goodies and many more
-                by contributing to NearHive community.
+                many more by contributing to NearHive community.
               </p>
             </div>
           </div>

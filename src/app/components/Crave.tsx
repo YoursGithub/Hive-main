@@ -37,7 +37,7 @@ function Crave() {
               </h2>
 
               <div className="">
-                <div className="bg-[#F1B729] w-[450px] h-36 text-center text-black ml-[-180px] mt-6 p-2 max-w-screen absolute">
+                <div className="bg-[#F1B729] w-[600px] h-28 text-center text-black ml-[-360px] mt-6 p-2 max-w-screen absolute">
                   <p className="text-sm">
                     Our Curated Baskets make your work easy and affordable,
                     combining top talent and the right tools to speed up your

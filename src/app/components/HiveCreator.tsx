@@ -18,7 +18,7 @@ function HiveCreator() {
                 <h3 className="text-xl font-semibold">
                   Join as a creator and Earn!
                 </h3>
-                <p className="text-sm  leading-relaxed">
+                <p className="text-md leading-relaxed">
                   Join as a NearHive creator and earn credits, offers, goodies{" "}
                   <br />
                   and many more by contributing to NearHive community.
@@ -34,7 +34,7 @@ function HiveCreator() {
               width={450}
               height={450}
               alt="Rewards"
-              className="absolute w-64 right-20 top-14 z-0 pointer-events-none"
+              className="absolute w-72 right-20 top-14 z-0 pointer-events-none"
             />
           </div>
 

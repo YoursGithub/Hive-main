@@ -10,22 +10,22 @@ function How() {
           clipPath: "polygon(20px 0%, 100% 0%, 100% 100%, 0% 100%)",
         }}
       ></div>
-      <section className="hidden lg:block w-full px-6 md:px-20 py-14 bg-white relative overflow-hidden">
+      <section className="hidden lg:block w-full px-6 md:px-20 py-14  relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-[22px] md:text-[24px] font-bold text-black max-w-[450px] leading-snug">
+          <h2 className="text-[22px] md:text-[28px] font-bold text-black max-w-[450px] leading-snug">
             Not Just Another Delivery App, This one&apos;s Interesting
           </h2>
 
           <Image
             src="/assets/line.png"
-            width={750}
+            width={600}
             height={300}
             alt="Line"
-            className="mx-auto left-20"
+            className="mx-auto mt-[-20px] ml-84"
           />
 
           <div className="relative h-[160px] w-full">
-            <div className="absolute right-20 mt-[-110px] text-black font-semibold text-3xl">
+            <div className="absolute right-36 mt-[-90px] text-black font-semibold text-3xl">
               How?
             </div>
           </div>
