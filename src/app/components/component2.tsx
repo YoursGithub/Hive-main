@@ -168,7 +168,7 @@ const component2 = () => {
                   />
                 </div>
 
-                <div className="absolute top-[-160px] left-[-40px] z-10">
+                <div className="absolute lg:top-[-160px] top-[-50px] left-[-40px] z-10">
                   <Image
                     src="/assets/Frame 625320.svg"
                     alt="Indian"
@@ -177,7 +177,7 @@ const component2 = () => {
                   />
                 </div>
 
-                <div className="absolute top-[-20px] right-[-65px] z-10">
+                <div className="absolute lg:top-[-20px] top-[50px] right-[-65px] z-10">
                   <Image
                     src="/assets/Frame 625321.svg"
                     alt="Thai"
@@ -186,7 +186,7 @@ const component2 = () => {
                   />
                 </div>
 
-                <div className="absolute top-[20px] left-[-40px] z-10">
+                <div className="absolute lg:top-[20px] top-[100px] left-[-40px] z-10">
                   <Image
                     src="/assets/Frame 625322.svg"
                     alt="Chinese"
