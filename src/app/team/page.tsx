@@ -19,8 +19,8 @@ function page() {
           <Image src="/assets/kunal.svg" width={100} height={100} alt="" className="w-36" />
           <div className="text-black text-center lg:text-left">
             <h3 className="text-3xl">Kunal Deb</h3>
-            <p className="text-xs font-light">
-              Director & Chief Executive Officer
+            <p className="text-sm font-light">
+             Chief Executive Officer
             </p>
           </div>
         </div>
@@ -37,12 +37,9 @@ function page() {
             <Image src="/assets/line.svg" width={100} height={100} alt="" className="w-[600px]" />
           </div>
           <div className="flex justify-center mt-5 px-4">
-            <p className="text-black text-xs text-center max-w-xl">
-              During the Redemption period, token allocations thaw and
-              become redeemable. Successfully-claimed token allocations during
-              Glacier Drop and Scavenger Mine are initially frozen (locked).
-              Allocations thaw (unlock) following a staggered schedule in four
-              equally-spaced, 25% installments over the course of 360 days.
+            <p className="text-black text-md text-center max-w-xl">
+              NearHive is the world&apos;s first social experience food delivery app where you scroll like Insta, order like Zomato, and flirt with flavor. Be a Hive Creator, earn rewards for your snaps, and let&apos;s make your cravings and maybe your heart hungry for more.
+
             </p>
           </div>
 

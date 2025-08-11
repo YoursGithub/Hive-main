@@ -8,6 +8,7 @@ import Hiveblog from "../components/hiveblog1";
 import Hiveblog2 from "../components/hiveblog2";
 import Blogcomponent from "../components/Blogcomponent";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 const Hiveblogs = () => {
   const [activeContent, setActiveContent] = useState("creator");
@@ -110,9 +111,9 @@ const Hiveblogs = () => {
                 {currentContent.description2}
               </p>
 
-              <button className="bg-[#F1B729] text-black px-7 py-3.5 rounded-lg font-semibold transition-all duration-200 inline-flex items-center gap-2">
+              <Link href='/blogs' className="bg-[#F1B729] text-black px-7 py-3.5 rounded-lg font-semibold transition-all duration-200 inline-flex items-center gap-2">
                 {currentContent.buttonText} <ArrowUpRight className="w-4 h-4" />
-              </button>
+              </Link>
             </div>
 
             <div className="hidden md:flex absolute right-10 top-1/2 transform -translate-y-1/2 flex-col gap-4">
@@ -150,9 +151,9 @@ const Hiveblogs = () => {
             />
           </div>
 
-          <div className="p-3 text-black bg-amber-400 w-52 whitespace-nowrap mx-auto mt-10">
+          <Link href="/blogs" className="p-3 text-black bg-amber-400 w-52 whitespace-nowrap mx-auto mt-10">
             Read full blog
-          </div>
+          </Link>
         </div>
       </section>
 
@@ -176,7 +177,7 @@ const Hiveblogs = () => {
         <div className="text-center text-black">
           <p className="text-sm">HIVE BLOGS</p>
           <h2 className="text-xl m-3">
-            Join as a NearHive creator and earn credits, offers, goodies.
+            Get NearHive updates, tips, and news through our exciting blogs.
           </h2>
         </div>
 

@@ -26,7 +26,7 @@ const HiveHomepage = () => {
   };
 
   useEffect(() => {
-    const timeout = setTimeout(() => setLoading(false), 2100);
+    const timeout = setTimeout(() => setLoading(false), 2300);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -70,7 +70,7 @@ const HiveHomepage = () => {
   return (
     <div className="min-h-screen overflow-x-hidden bg-white relative">
       <Navbar />
-      <main className="relative flex flex-col items-center justify-center mt-36 lg:mt-0 px-6 pt-24">
+      <main className="relative flex flex-col items-center justify-center mt-16 lg:mt-0 px-6 pt-24">
         <div className="relative flex flex-col items-center justify-center">
           <div className="relative w-[200px] h-[80px] flex justify-between mb-2">
             <Image
@@ -134,8 +134,7 @@ const HiveHomepage = () => {
               className="text-gray-300 text-sm max-w-2xl mt-2 mx-auto leading-relaxed"
               style={{ fontFamily: "var(--font-sfpro)" }}
             >
-              Our Curated Baskets make your work easy and affordable, combining
-              top talent and the right tools to speed up your projects.
+              We bring you the fastest delivery and the best service with our hybrid commerce—it&apos;s like online shopping, but with superhero speed.
             </p>
 
             <div className="flex lg:flex-row text-center items-center flex-col mt-20 gap-10 justify-center">

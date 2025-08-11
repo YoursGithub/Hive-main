@@ -32,11 +32,8 @@ function Hivecreators() {
                   Join as a creator and earn!
                 </h2>
                 <p className="text-lg lg:text-sm lg:mt-0 mt-10">
-                  Join as a NearHive creator and earn credits, offers, goodies
-                  and many more by <br /> contributing to NearHive community.
-                  Join as a NearHive creator and earn <br /> credits, offers,
-                  goodies and many more by contributing to NearHive <br />{" "}
-                  community.
+                  On most apps, you click photos like Snapchat, post them, and all you get is <br /> random “hey” texts. But with NearHive, if you&aposre a HiveCreator, those snaps can <br /> actually earn you credits, offers, goodies, and more. So go ahead—make your pics <br /> look so good, we&aposll be blushing while sending you rewards.
+
                 </p>
               </div>
 
@@ -62,14 +59,14 @@ function Hivecreators() {
 
             <div className="w-full h-px bg-gray-300 my-4 mt-20" />
 
-            <div className="flex flex-col md:flex-row mt-[-10px] p-3 items-center md:m-0">
+            {/* <div className="flex flex-col md:flex-row mt-[-10px] p-3 items-center md:m-0">
               <p className="text-xs text-center">
                 GET EARLY ACCESS TO HIVE CREATOR COMMUNITY
               </p>
               <button className="bg-[#F1B729] mt-5 lg:mt-0 lg:ml-auto text-black font-semibold px-6 py-2 transition duration-200">
                 Join
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -80,7 +77,7 @@ function Hivecreators() {
         </Suspense>
       </section>
 
-      <section className="mt-10">
+      {/* <section className="mt-10">
         <div className="text-center text-2xl m-3 lg:m-0 text-black font-extralight">
           <h2>
             So guys, let’s see what perks you’ll get if you become Hive <br />{" "}
@@ -121,7 +118,7 @@ function Hivecreators() {
             </div>
           </div>
         </section>
-      </section>
+      </section> */}
 
       <Footer />
     </>

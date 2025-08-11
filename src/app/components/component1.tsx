@@ -20,8 +20,8 @@ const Component1 = () => {
           We are the World&apos;s First social experience <br /> Delivery App
         </h2>
         <p className="font-medium text-sm mt-2 max-w-[560px] mx-auto">
-          Our Curated Baskets make your work easy and affordable, combining top
-          talent and the right tools to speed up your projects.
+          We&apos;re the world&apos;s first social experience food delivery app — because apparently, eating alone in peace was too mainstream.
+
         </p>
       </div>
 
