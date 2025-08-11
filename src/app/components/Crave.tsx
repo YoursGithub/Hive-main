@@ -71,13 +71,7 @@ function Crave() {
           <div className="w-full px-4 mt-6">
             <div className="bg-[#F1B729] max-w-[450px] w-full h-auto text-center text-black p-4 mx-auto">
               <p className="text-sm">
-                Our Curated Baskets make your work easy and affordable,
-                combining top talent and the right tools to speed up your
-                projects. Our Curated Baskets make your work easy and
-                affordable, combining top talent and the right tools to speed up
-                your projects. Our Curated Baskets make your work easy and
-                affordable, combining top talent and the right tools to speed up
-                your projects.
+                Picture this: Instagram and Pinterest get together, fall in love over aesthetic food pics, and have a wildly addictive baby with Zomato and Swiggy. Now you’re scrolling endlessly, liking photos you can actually eat, and ordering stuff before your brain even processes the hunger. Welcome to the only app where procrastination and cravings unite into one glorious, delicious disaster.
               </p>
             </div>
           </div>
