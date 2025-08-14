@@ -8,7 +8,7 @@ import { useSearchParams } from "next/navigation";
 const Form = () => {
 
     const searchParams = useSearchParams();
-  const userId = searchParams.get("userId");
+  const userId = searchParams.get("id");
 
   const [formData, setFormData] = useState({
     name: "",
