@@ -7,7 +7,7 @@ export type Blog = {
     thumbnail: string;
     description: string;
     content: string;
-    createdAt: Timestamp; // ISO date string
+    createdAt: Timestamp;
 }
 
 export async function fetchBlogs() {

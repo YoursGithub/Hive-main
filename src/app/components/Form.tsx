@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { createHiveCreator } from "@/services/hivecreator";
+import { toast } from "react-toastify";
 import { useSearchParams } from "next/navigation";
 
 const Form = () => {
@@ -39,13 +40,10 @@ const Form = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form Data:", formData);
-    // Add API call or further processing
+  e.preventDefault();
+  console.log("Form Data:", formData);
 
-    try {
-      
-
+  try {
     await createHiveCreator(userId, {
       description: formData.about,
       email: formData.email,
@@ -54,16 +52,36 @@ const Form = () => {
       phone: formData.phone,
       social: formData.link,
       store: formData.favoriteCafe,
-      cuisines : formData.cuisines
+      cuisines: formData.cuisines,
     });
 
-    
-    } catch (error) {
-      console.log(error);
-      
-    }
+    toast.success("Successfully submitted!", {
+      position: "top-right",
+      autoClose: 3000,
+    });
 
-  };
+    setFormData({
+      name: "",
+      phone: "",
+      email: "",
+      link: "",
+      about: "",
+      cuisines: [],
+      favoriteCafe: "",
+      favoriteFood: "",
+    });
+
+  } catch (error) {
+    console.error("Submission failed:", error);
+
+    toast.error("Submission failed. Please try again!", {
+      position: "top-right",
+      autoClose: 3000,
+    });
+  }
+};
+
+
   return (
     <>
       <div className="text-center text-black">
@@ -133,8 +151,6 @@ const Form = () => {
               onChange={handleChange}
               className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-black"
               required
-
-
             />
           </div>
         </div>

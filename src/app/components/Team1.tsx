@@ -17,7 +17,7 @@ function Team1() {
               />
               <div className="text-black text-center">
                 <h3 className="text-xl">Subhrojyoti Sen</h3>
-                <p className="text-xs font-light">
+                <p className="text-sm font-light">
                   Chief Techincal officer
                 </p>
               </div>
@@ -49,8 +49,8 @@ function Team1() {
                 />
                 <div className="text-black text-center">
                   <h3 className="text-xl">Dipankar Deb</h3>
-                  <p className="text-xs font-light">
-                    Director & Chief Executive Officer
+                  <p className="text-sm font-light">
+                    Chief Finance officer
                   </p>
                 </div>
               </div>
@@ -78,8 +78,8 @@ function Team1() {
                 />
                 <div className="text-black text-center">
                   <h3 className="text-xl">Subhajit Bhattacharjee</h3>
-                  <p className="text-xs font-light">
-                    Director & Chief Executive Officer
+                  <p className="text-sm font-light">
+                     Chief Operating Officer
                   </p>
                 </div>
               </div>
@@ -107,8 +107,8 @@ function Team1() {
                 />
                 <div className="text-black text-center">
                   <h3 className="text-xl">Saurojit Karmakar</h3>
-                  <p className="text-xs font-light">
-                    Director & Chief Executive Officer
+                  <p className="text-sm font-light">
+                    System Administrator
                   </p>
                 </div>
               </div>
@@ -136,8 +136,8 @@ function Team1() {
                 />
                 <div className="text-black text-center">
                   <h3 className="text-xl">Tanmoy Chakraborty</h3>
-                  <p className="text-xs font-light">
-                    Director & Chief Executive Officer
+                  <p className="text-sm font-light">
+                    Web Development Head
                   </p>
                 </div>
               </div>
@@ -179,8 +179,8 @@ function Team1() {
                 />
                 <div className="text-black text-center">
                   <h3 className="text-xl">Barnik Deb</h3>
-                  <p className="text-xs font-light">
-                    Director & Chief Executive Officer
+                  <p className="text-sm font-light">
+                    Content Head
                   </p>
                 </div>
               </div>
@@ -208,7 +208,7 @@ function Team1() {
                 />
                 <div className="text-black text-center">
                   <h3 className="text-xl">Pratham Mazumdar</h3>
-                  <p className="text-xs font-light">
+                  <p className="text-sm font-light">
                     Co-Middleman Head (Finance)
                   </p>
                 </div>
@@ -233,7 +233,7 @@ function Team1() {
                 />
                 <div className="text-black text-center">
                   <h3 className="text-xl">Argajit Dutta</h3>
-                  <p className="text-xs font-light">
+                  <p className="text-sm font-light">
                     Co- Middleman Head (Ground)
                   </p>
                 </div>
@@ -350,7 +350,7 @@ function Team1() {
                 />
                 <div className="text-black text-center">
                   <h3 className="text-xl">Alok Kumar Dey</h3>
-                  <p className="text-xs font-light">
+                  <p className="text-sm font-light">
                     Application Developer
                   </p>
                 </div>
@@ -375,7 +375,7 @@ function Team1() {
                 />
                 <div className="text-black text-center">
                   <h3 className="text-xl">Soumyadeep Ghosh</h3>
-                  <p className="text-xs font-light">
+                  <p className="text-sm font-light">
                     Onboarding Head
                   </p>
                 </div>
@@ -400,7 +400,7 @@ function Team1() {
                 />
                 <div className="text-black text-center">
                   <h3 className="text-xl">Ashu Rajput</h3>
-                  <p className="text-xs font-light">
+                  <p className="text-sm font-light">
                     Editor
                   </p>
                 </div>
@@ -481,7 +481,7 @@ function Team1() {
             />
             <div className="text-black text-center">
               <h3 className="text-lg">Saurojit Karmakar</h3>
-              <p className="text-xs font-light">System Analyst</p>
+              <p className="text-xs font-light">System Administrator</p>
             </div>
           </div>
         </div>
@@ -507,7 +507,7 @@ function Team1() {
                 Subhait <br /> Bhattacharjee
               </h3>
               <p className="text-xs font-light">
-                Director & <br /> Chief Operation Officer
+                Chief Operation Officer
               </p>
             </div>
           </div>

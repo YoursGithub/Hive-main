@@ -6,7 +6,7 @@ function Hiveverse() {
     <>
         <section className="mt-20">
                 <div className="text-center m-10">
-                  <h2 className="text-black text-3xl md:text-2xl font-extrabold">
+                  <h2 className="text-black text-3xl md:text-3xl font-extrabold">
                     Introducing HiveVerse
                   </h2>
                   <p className="text-black mt-3 text-sm">

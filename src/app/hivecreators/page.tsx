@@ -1,13 +1,26 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Navbar from "../components/navbar";
 import Image from "next/image";
-import Form from "../components/Form";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Form from "../components/Form"; 
 import Footer from "../components/footer";
 
 function Hivecreators() {
   return (
     <>
       <Navbar />
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
 
       <section>
         <div>
@@ -15,13 +28,12 @@ function Hivecreators() {
             <div className="flex flex-col md:flex-row gap-36 justify-center p-10 items-center">
               <div className="text-white space-y-5 mt-7 lg:mt-10">
                 <p className="text-xs">HIVE BLOG</p>
-                <h2 className="text-3xl whitespace-nowrap font-extrabold">Join as a creator and earn!</h2>
+                <h2 className="text-3xl whitespace-nowrap font-extrabold">
+                  Join as a creator and earn!
+                </h2>
                 <p className="text-lg lg:text-sm lg:mt-0 mt-10">
-                  Join as a NearHive creator and earn credits, offers, goodies
-                  and many more by <br /> contributing to NearHive community.
-                  Join as a NearHive creator and earn <br /> credits, offers,
-                  goodies and many more by contributing to NearHive <br />{" "}
-                  community.
+                  On most apps, you click photos like Snapchat, post them, and all you get is <br /> random “hey” texts. But with NearHive, if you&aposre a HiveCreator, those snaps can <br /> actually earn you credits, offers, goodies, and more. So go ahead—make your pics <br /> look so good, we&aposll be blushing while sending you rewards.
+
                 </p>
               </div>
 
@@ -47,23 +59,25 @@ function Hivecreators() {
 
             <div className="w-full h-px bg-gray-300 my-4 mt-20" />
 
-            <div className="flex flex-col md:flex-row mt-[-10px] p-3 items-center md:m-0">
+            {/* <div className="flex flex-col md:flex-row mt-[-10px] p-3 items-center md:m-0">
               <p className="text-xs text-center">
                 GET EARLY ACCESS TO HIVE CREATOR COMMUNITY
               </p>
               <button className="bg-[#F1B729] mt-5 lg:mt-0 lg:ml-auto text-black font-semibold px-6 py-2 transition duration-200">
                 Join
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
 
       <section className="mt-20">
-        <Form />
+        <Suspense fallback={<div className="text-center py-10">Loading Form...</div>}>
+          <Form />
+        </Suspense>
       </section>
 
-      <section className="mt-10">
+      {/* <section className="mt-10">
         <div className="text-center text-2xl m-3 lg:m-0 text-black font-extralight">
           <h2>
             So guys, let’s see what perks you’ll get if you become Hive <br />{" "}
@@ -79,9 +93,7 @@ function Hivecreators() {
               </h3>
               <p className="text-xs text-gray-600 mr-0 md:mr-20 mt-3">
                 Join as a NearHive creator and earn credits, offers, goodies and
-                many more by contributing to NearHive community. Join as a
-                NearHive creator and earn credits, offers, goodies and many more
-                by contributing to NearHive community.
+                many more by contributing to NearHive community.
               </p>
             </div>
 
@@ -101,14 +113,12 @@ function Hivecreators() {
               </h3>
               <p className="text-xs text-gray-600 mt-3">
                 Join as a NearHive creator and earn credits, offers, goodies and
-                many more by contributing to NearHive community. Join as a
-                NearHive creator and earn credits, offers, goodies and many more
-                by contributing to NearHive community.
+                many more by contributing to NearHive community.
               </p>
             </div>
           </div>
         </section>
-      </section>
+      </section> */}
 
       <Footer />
     </>

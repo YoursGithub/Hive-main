@@ -39,7 +39,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${sfPro.variable} antialiased`}
-        style={{ fontFamily: "var(--font-sf-pro)" }} // Apply SF Pro Display by default
+        style={{ fontFamily: "var(--font-sf-pro)" }}
       >
         {children}
       </body>

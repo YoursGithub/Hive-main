@@ -51,7 +51,7 @@ export async function createHiveCreator(userId: string, { description,
         console.log("hive creator created");
 
 
-    } catch (error) {
+    } catch {
 
         throw new Error("Failed to create hive creator")
 

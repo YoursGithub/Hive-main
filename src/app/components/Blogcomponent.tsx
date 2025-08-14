@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 function Blogcomponent() {
   return (
@@ -22,12 +23,12 @@ function Blogcomponent() {
             Learn how to become a testnet-O2 block producer, including setup for
             Cardano SPOs, dependency services, and node configuration.
           </p>
-          <a
-            href="#"
+          <Link
+            href="/blogs"
             className="inline-flex items-center px-4 py-2 text-sm font-medium text-black bg-[#F1B729] rounded-md transition"
           >
             Read Full Blog <ArrowUpRight className="w-4 h-4 ml-2" />
-          </a>
+          </Link>
         </div>
       </div>
     </>

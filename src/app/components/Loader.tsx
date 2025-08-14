@@ -1,14 +1,20 @@
-// import React from 'react';
-// import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+"use client";
 
-// const Loader = () => {
-//   return (
-//     <DotLottieReact
-//       src="https://lottie.host/817b4c1d-9e5f-4207-9cea-11af28958c7f/5d7c87MDCv.lottie"
-//       loop
-//       autoplay
-//     />
-//   );
-// };
+import Image from "next/image";
+import React from "react";
 
-// export default Loader
+const Loader = () => {
+  return (
+    <div className="fixed inset-0 bg-[#FBFBFB] flex items-center justify-center z-[9999]">
+      <Image
+        src="/animations/loader (2)_3.gif"
+        alt="Loading..."
+        width={200}
+        height={200}
+        className="w-[400px]"
+      />
+    </div>
+  );
+};
+
+export default Loader;
