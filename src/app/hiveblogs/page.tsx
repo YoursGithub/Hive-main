@@ -1,78 +1,76 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import Image from "next/image";
-import Hiveblog from "../components/hiveblog1";
-import Hiveblog2 from "../components/hiveblog2";
 import Blogcomponent from "../components/Blogcomponent";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import { fetchBlogs, type Blog } from "@/services/blogs";
 
 const Hiveblogs = () => {
-  const [activeContent, setActiveContent] = useState("creator");
+  const [activeContent, setActiveContent] = useState(0);
+  const [blogs, setBlogs] = useState<Blog[]>([]);
+  const [featuredBlogs, setFeaturedBlogs] = useState<Blog[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const contents = {
-    creator: {
-      title: "Join as a creator and earn!",
-      description1:
-        "Join as a NearHive creator and earn credits, offers, goodies and many more by contributing to NearHive community. Join as a NearHive creator and earn credits, offers, goodies and many more by contributing to NearHive community.",
-      description2:
-        "Join as a NearHive creator and earn credits, offers, goodies and many more by contributing to NearHive community. Join as a NearHive creator and earn credits, offers, goodies and many more by contributing to NearHive community. Join as a NearHive creator and earn credits, offers, goodies and many more by contributing >",
-      buttonText: "Read Full Blog ",
-    },
-    ecosystem: {
-      title: "Creating an ecosystem of Hive services",
-      description1:
-        "Build and contribute to a thriving ecosystem of interconnected Hive services. Connect with developers, creators, and innovators who are shaping the future of decentralized applications.",
-      description2:
-        "Our ecosystem provides the tools and resources you need to create meaningful connections and build sustainable digital products. Join thousands of creators who are already part of our growing community.",
-      buttonText: "Explore Ecosystem →",
-    },
+  useEffect(() => {
+    const loadBlogs = async () => {
+      try {
+        const fetchedBlogs = await fetchBlogs();
+        const sortedBlogs = fetchedBlogs.sort((a, b) => 
+          b.createdAt.toMillis() - a.createdAt.toMillis()
+        );
+        setBlogs(sortedBlogs);
+        setFeaturedBlogs(sortedBlogs.slice(0, 2));
+      } catch (error) {
+        console.error("Error fetching blogs:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadBlogs();
+  }, []);
+
+  const getDynamicContents = () => {
+    return featuredBlogs.map(blog => ({
+      title: blog.title,
+      description1: blog.description.substring(0, 200) + (blog.description.length > 200 ? "..." : ""),
+      description2: blog.description.substring(200, 400) + (blog.description.length > 400 ? "..." : ""),
+      buttonText: "Read Full Blog",
+      blogId: blog.blogId,
+    }));
   };
 
-  const currentContent = contents[activeContent as keyof typeof contents];
+  const dynamicContents = getDynamicContents();
+  const currentContent = dynamicContents[activeContent] || dynamicContents[0];
 
   const renderThumbnails = () => (
     <>
-      <div
-        className={`w-20 overflow-hidden cursor-pointer transition-all duration-300 hover:scale-105 bg-white`}
-        onClick={() => setActiveContent("creator")}
-      >
-        <div className="w-full h-20 relative">
-          <Image
-            src="/assets/Rectangle 3699.png"
-            alt="Hive Creator"
-            layout="fill"
-            objectFit="cover"
-            className=""
-          />
+      {dynamicContents.map((content, index) => (
+        <div
+          key={index}
+          className={`w-20 overflow-hidden cursor-pointer transition-all duration-300 hover:scale-105 bg-white ${
+            activeContent === index ? 'ring-2 ring-[#F1B729]' : ''
+          }`}
+          onClick={() => setActiveContent(index)}
+        >
+          <div className="w-full h-20 relative">
+            <Image
+              src={featuredBlogs[index]?.thumbnail || "/assets/Rectangle 3699.png"}
+              alt={content.title}
+              layout="fill"
+              objectFit="cover"
+              className=""
+            />
+          </div>
+          <div className="p-2 hidden lg:block text-center text-black font-semibold text-[10px] whitespace-nowrap leading-tight">
+            {content.title.length > 20 ? content.title.substring(0, 20) + '...' : content.title}
+          </div>
         </div>
-        <div className="p-2 hidden lg:block text-center text-black font-semibold text-[10px] whitespace-nowrap leading-tight">
-          Join as a <br /> NearHive Creator
-        </div>
-      </div>
-
-      <div
-        className={`w-20 overflow-hidden cursor-pointer transition-all duration-300 hover:scale-105 bg-white`}
-        onClick={() => setActiveContent("ecosystem")}
-      >
-        <div className="w-full h-20 relative">
-          <Image
-            src="/assets/Rectangle 3699.png"
-            alt="Hive Ecosystem"
-            layout="fill"
-            objectFit="cover"
-            className=""
-          />
-        </div>
-        <div className="p-2 hidden lg:block text-center text-black text-[10px] whitespace-nowrap font-semibold text-xs leading-tight">
-          Creating an <br />
-          ecosystem of <br />
-          Hive services
-        </div>
-      </div>
+      ))}
     </>
   );
 
@@ -83,7 +81,7 @@ const Hiveblogs = () => {
         <div className="max-w-7xl mx-auto bg-white min-h-[500px] flex flex-col md:flex-row mt-10 lg:mt-0">
           <div className="lg:mt-40 mt-6 mx-auto flex flex-row items-start gap-2">
             <Image
-              src="/assets/photo.png"
+              src={featuredBlogs[activeContent]?.thumbnail || ""}
               width={800}
               height={800}
               alt="Main"
@@ -100,19 +98,22 @@ const Hiveblogs = () => {
           <div className="flex-1 px-12 py-16 bg-white lg:text-left text-center relative flex flex-col justify-center">
             <div className="text-center lg:max-w-md">
               <h1 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
-                {currentContent.title}
+                {currentContent?.title}
               </h1>
 
               <p className="text-gray-600 text-base leading-relaxed mb-5">
-                {currentContent.description1}
+                {currentContent?.description1}
               </p>
 
               <p className="text-gray-600 text-base leading-relaxed mb-8">
-                {currentContent.description2}
+                {currentContent?.description2}
               </p>
 
-              <Link href='/blogs' className="bg-[#F1B729] text-black px-7 py-3.5 rounded-lg font-semibold transition-all duration-200 inline-flex items-center gap-2">
-                {currentContent.buttonText} <ArrowUpRight className="w-4 h-4" />
+              <Link 
+                href={currentContent?.blogId ? `/blogs/${currentContent.blogId}` : '/blogs'} 
+                className="bg-[#F1B729] text-black px-7 py-3.5 rounded-lg font-semibold transition-all duration-200 inline-flex items-center gap-2"
+              >
+                {currentContent?.buttonText} <ArrowUpRight className="w-4 h-4" />
               </Link>
             </div>
 
@@ -121,19 +122,12 @@ const Hiveblogs = () => {
             </div>
           </div>
         </div>
-
-        <div className="text-center py-10">
-          <p className="text-xl text-black font-medium max-w-lg mx-auto">
-            Damn guys, we&apos;ve achieved so many things. You should read some,
-            its interesting ;)
-          </p>
-        </div>
       </div>
 
-      <section className="w-full bg-black text-center py-16">
+      <section className="w-full bg-black text-center py-16 mt-[-250px] lg:mt-0">
         <div className="space-y-10">
           <div className="text-white px-4">
-            <h2 className="text-3xl">don’t just order, have fun</h2>
+            <h2 className="text-3xl">don&apos;t just order, have fun</h2>
             <p className="text-sm mt-5 lg:max-w-md mx-auto text-center">
               Join as a NearHive creator and earn credits, offers, goodies and
               many more by contributing to NearHive community. Join as a
@@ -157,23 +151,7 @@ const Hiveblogs = () => {
         </div>
       </section>
 
-      <section className="mt-20">
-        <div className="text-black text-center">
-          <h2 className="text-3xl">don’t just order, have fun</h2>
-          <p className="text-sm mt-2 text-[#313131]">
-            Join as a NearHive creator and earn credits, offers, goodies and
-            many more by <br /> contributing to NearHive community.
-          </p>
-        </div>
-
-        <div>
-          <Hiveblog />
-          <Hiveblog2 />
-          <Hiveblog />
-        </div>
-      </section>
-
-      <section className="mt-20">
+      <section className="mt-10">
         <div className="text-center text-black">
           <p className="text-sm">HIVE BLOGS</p>
           <h2 className="text-xl m-3">
@@ -182,11 +160,6 @@ const Hiveblogs = () => {
         </div>
 
         <div className="max-w-5xl text-center mt-10 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <Blogcomponent />
-          <Blogcomponent />
-          <Blogcomponent />
-          <Blogcomponent />
-          <Blogcomponent />
           <Blogcomponent />
         </div>
       </section>

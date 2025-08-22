@@ -92,28 +92,23 @@ const Footer = () => {
           <div>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-white hover:text-yellow-400 transition-colors text-sm">
+                <a href="/report" className="text-white hover:text-yellow-400 transition-colors text-sm">
                   Report Issue
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white hover:text-yellow-400 transition-colors text-sm">
+                <a href="" className="text-white hover:text-yellow-400 transition-colors text-sm">
                   Help
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white hover:text-yellow-400 transition-colors text-sm">
+                <a href="/privacy" className="text-white hover:text-yellow-400 transition-colors text-sm">
                   Privacy & policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white hover:text-yellow-400 transition-colors text-sm">
+                <a href="/legals" className="text-white hover:text-yellow-400 transition-colors text-sm">
                   Terms & condition
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white hover:text-yellow-400 transition-colors text-sm">
-                  Cookies policy
                 </a>
               </li>
             </ul>
@@ -127,21 +122,24 @@ const Footer = () => {
             </h3>
             <div className="space-y-3 max-w-xs">
               <a
-                href="#"
+                href="https://www.youtube.com/@tnentapp"
+                target="_blank"
                 className="bg-gray-800 hover:bg-yellow-400 hover:text-black transition-colors px-4 py-2 rounded flex items-center space-x-3 w-36"
               >
                 <FaYoutube size={16} />
                 <span className="text-sm">Youtube</span>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/tnentapp/"
+                target="_blank"
                 className="bg-gray-800 hover:bg-yellow-400 hover:text-black transition-colors px-4 py-2 rounded flex items-center space-x-3 w-36"
               >
                 <FaInstagram size={16} />
                 <span className="text-sm">Instagram</span>
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/nearhiveapp/posts/?feedView=all"
+                target="_blank"
                 className="bg-gray-800 hover:bg-yellow-400 hover:text-black transition-colors px-4 py-2 rounded flex items-center space-x-3 w-36"
               >
                 <FaLinkedin size={16} />
