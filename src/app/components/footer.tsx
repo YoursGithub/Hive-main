@@ -92,7 +92,7 @@ const Footer = () => {
           <div>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-white hover:text-yellow-400 transition-colors text-sm">
+                <a href="/report" className="text-white hover:text-yellow-400 transition-colors text-sm">
                   Report Issue
                 </a>
               </li>
@@ -102,12 +102,12 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white hover:text-yellow-400 transition-colors text-sm">
+                <a href="/privacy" className="text-white hover:text-yellow-400 transition-colors text-sm">
                   Privacy & policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white hover:text-yellow-400 transition-colors text-sm">
+                <a href="/legals" className="text-white hover:text-yellow-400 transition-colors text-sm">
                   Terms & condition
                 </a>
               </li>
