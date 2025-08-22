@@ -180,7 +180,7 @@ function Team1() {
                 <div className="text-black text-center">
                   <h3 className="text-xl">Barnik Deb</h3>
                   <p className="text-sm font-light">
-                    Content Head
+                    Chief Marketing Officer
                   </p>
                 </div>
               </div>
@@ -271,7 +271,7 @@ function Team1() {
                 height={800}
               />
               <div className="text-black">
-                <h3 className="text-3xl">Baaz Rana</h3>
+                <h3 className="text-3xl">Priyabaaz Rana</h3>
                 <p className="text-sm font-light">Advisory Director</p>
               </div>
             </div>
@@ -289,14 +289,8 @@ function Team1() {
 
               <div>
                 <p className="text-black max-w-md text-xs">
-                  During the Redemption period, token allocations thaw and
-                  become redeemable. Successfully-claimed token allocations
-                  during Glacier Drop and Scavenger Mine are initially frozen
-                  (locked). Allocations thaw (unlock) following a staggered
-                  schedule in four equally-spaced, 25% installments over the
-                  course of 360 days Allocations thaw (unlock) following a
-                  staggered schedule in four equally-spaced, 25% installments
-                  over the course of 360 days
+                  Priya Baaz Rana – Advisory Director, NearHive
+Priya Baaz Rana serves as the Advisory Director at NearHive, bringing with him a wealth of experience and strategic insight. As an early investor in the company, he not only believed in NearHive’s vision but also actively supports its growth by guiding key business decisions. With his deep industry knowledge and strong leadership acumen, Priya helps the team navigate challenges, refine strategies, and identify opportunities that align with the company’s long-term goals. His advisory role ensures that NearHive continues to innovate and scale with a strong foundation of experience and foresight.
                 </p>
               </div>
             </div>
@@ -445,9 +439,9 @@ function Team1() {
             <Image
               src="/assets/dips.svg"
               alt=""
-              className="w-16"
-              width={800}
-              height={800}
+              className="w-20"
+              width={20}
+              height={20}
             />
             <div className="text-black text-center">
               <h3 className="text-lg">Dipankar Deb</h3>
@@ -545,7 +539,7 @@ function Team1() {
               />
               <div className="text-black text-center">
                 <h3 className="text-lg">Barnik Deb</h3>
-                <p className="text-xs font-light">Content head</p>
+                <p className="text-xs font-light">Chief Marketing <br />Officer</p>
               </div>
             </div>
           </div>
@@ -612,7 +606,7 @@ function Team1() {
                 height={800}
               />
               <div className="text-black">
-                <h3 className="text-3xl">Dr. Baaz Rana</h3>
+                <h3 className="text-3xl">Priyabaaz Rana</h3>
                 <p className="text-sm font-light">Advisory Director</p>
               </div>
             </div>
@@ -629,15 +623,9 @@ function Team1() {
               </div>
 
               <div>
-                <p className="text-black max-w-md text-xs">
-                  During the Redemption period, token allocations thaw and
-                  become redeemable. Successfully-claimed token allocations
-                  during Glacier Drop and Scavenger Mine are initially frozen
-                  (locked). Allocations thaw (unlock) following a staggered
-                  schedule in four equally-spaced, 25% installments over the
-                  course of 360 days Allocations thaw (unlock) following a
-                  staggered schedule in four equally-spaced, 25% installments
-                  over the course of 360 days
+                <p className="text-black max-w-md mr-5 text-xs">
+                  Priya Baaz Rana – Advisory Director, NearHive
+Priya Baaz Rana serves as the Advisory Director at NearHive, bringing with him a wealth of experience and strategic insight. As an early investor in the company, he not only believed in NearHive’s vision but also actively supports its growth by guiding key business decisions. With his deep industry knowledge and strong leadership acumen, Priya helps the team navigate challenges, refine strategies, and identify opportunities that align with the company’s long-term goals. His advisory role ensures that NearHive continues to innovate and scale with a strong foundation of experience and foresight.
                 </p>
               </div>
             </div>
