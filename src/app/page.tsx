@@ -19,10 +19,10 @@ const HiveHomepage = () => {
   const [loading, setLoading] = useState(true);
 
   const datafn = async () => {
-    console.log(
-      await fetchBlogs(),
-      await fetchBlogsById("31eb8a4b-0949-44ae-8b19-d9aa69cad08d")
-    );
+    // console.log(
+    //   await fetchBlogs(),
+    //   await fetchBlogsById("31eb8a4b-0949-44ae-8b19-d9aa69cad08d")
+    // );
   };
 
   useEffect(() => {
@@ -78,6 +78,7 @@ const HiveHomepage = () => {
               alt="icon1"
               width={40}
               height={40}
+              priority
               className="absolute left-0 animate-float1"
             />
             <Image
@@ -85,6 +86,7 @@ const HiveHomepage = () => {
               alt="icon2"
               width={40}
               height={40}
+              priority
               className="absolute left-[45px] animate-float2 mt-[-20px]"
             />
             <Image
@@ -92,6 +94,7 @@ const HiveHomepage = () => {
               alt="icon3"
               width={40}
               height={40}
+              priority
               className="absolute left-[95px] animate-float3 mt-[-20px]"
             />
             <Image
@@ -99,6 +102,7 @@ const HiveHomepage = () => {
               alt="icon4"
               width={40}
               height={40}
+              priority
               className="absolute left-[140px] animate-float4"
             />
           </div>
@@ -120,6 +124,7 @@ const HiveHomepage = () => {
             width={480}
             height={480}
             alt="Mobile"
+            priority
             className="mt-7 p-10"
           />
         </div>

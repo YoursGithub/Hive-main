@@ -22,7 +22,7 @@ const Navbar = () => {
       <div className="hidden lg:flex items-center justify-between max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center space-x-8">
           <Link href="/" className="flex items-center space-x-2">
-            <Image src="/assets/logo.png" width={35} height={35} alt="Logo" />
+            <Image src="/assets/logo.png" width={35} priority height={35} alt="Logo" />
           </Link>
 
           <div className="md:flex space-x-6 text-gray-600">
@@ -70,6 +70,7 @@ const Navbar = () => {
                 src="/assets/googleplay.svg"
                 width={20}
                 height={20}
+                priority
                 alt="Google Play"
               />
             </Link>
@@ -77,6 +78,7 @@ const Navbar = () => {
               src="/assets/apple.svg"
               width={20}
               height={20}
+              priority
               alt="Apple"
               className="mt-[-6px]"
             />
@@ -94,10 +96,11 @@ const Navbar = () => {
               src="/assets/googleplay.svg"
               alt="Play Store"
               width={22}
+              priority
               height={22}
             />
           </Link>
-          <Image src="/assets/apple1.svg" alt="Apple" width={22} height={22} />
+          <Image src="/assets/apple1.svg" alt="Apple" priority width={22} height={22} />
         </div>
 
         <Link href="/hivecreators">
@@ -106,12 +109,13 @@ const Navbar = () => {
             alt="Creator"
             width={100}
             height={100}
+            priority
             className="w-full h-full"
           />
         </Link>
 
         <button onClick={() => setIsMenuOpen(true)}>
-          <Image src="/assets/bars.svg" alt="Menu" width={24} height={24} className="m-2" />
+          <Image src="/assets/bars.svg" alt="Menu" priority width={24} height={24} className="m-2" />
         </button>
       </div>
 
@@ -123,7 +127,7 @@ const Navbar = () => {
         <div className="flex flex-col h-full">
           <div className="flex justify-end p-4">
             <button onClick={() => setIsMenuOpen(false)}>
-              <Image src="/assets/xmark.png" alt="Close" width={28} height={28} />
+              <Image src="/assets/xmark.png" priority alt="Close" width={28} height={28} />
             </button>
           </div>
 
@@ -139,9 +143,9 @@ const Navbar = () => {
               href="https://play.google.com/store/apps/details?id=com.deliverybuzz.hive&hl=en"
               target="_blank"
             >
-              <Image src="/assets/googleplay.svg" alt="Google Play" width={28} height={28} />
+              <Image src="/assets/googleplay.svg" alt="Google Play" priority width={28} height={28} />
             </Link>
-            <Image src="/assets/apple.svg" alt="Apple" width={28} height={28} />
+            <Image src="/assets/apple.svg" alt="Apple" width={28} priority height={28} />
           </div>
         </div>
       </div>
@@ -157,6 +161,7 @@ const Navbar = () => {
               }
               alt="Home"
               width={24}
+              priority
               height={24}
             />
           </Link>
@@ -169,6 +174,7 @@ const Navbar = () => {
               }
               alt="Activity"
               width={24}
+              priority
               height={24}
             />
           </Link>
@@ -182,6 +188,7 @@ const Navbar = () => {
               alt="Team"
               width={24}
               height={24}
+              priority
             />
           </Link>
           <Link href="/hiveblogs" className="flex items-center justify-center">
@@ -193,6 +200,7 @@ const Navbar = () => {
               }
               alt="Blog"
               width={24}
+              priority
               height={24}
             />
           </Link>
